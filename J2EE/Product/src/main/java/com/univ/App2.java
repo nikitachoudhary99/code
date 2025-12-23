@@ -1,0 +1,31 @@
+package com.univ;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.ak.Entity.OnlineShopping;
+
+/**
+ * Hello world!
+ *
+ */
+public class App2 
+{
+    public static void main( String[] args )
+    {
+        Configuration cfg= new Configuration();
+        cfg.configure("product.cfg.xml");
+        SessionFactory sf=cfg.buildSessionFactory();
+        Session session=sf.openSession();
+        Transaction tnx=session.beginTransaction();
+        
+         OnlineShopping os=new OnlineShopping("0","jeans",5865522,"universal info");
+         session.save(os);
+         tnx.commit();
+         
+         session.close();
+         sf.close();
+    }
+}

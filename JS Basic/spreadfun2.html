@@ -1,0 +1,31 @@
+<!-- example spread function find greatest number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Function 2</title>
+    <script>
+        function maxFun(...a){
+            var i,max=a[0];
+            document.write("<br> List of arguments:-<br>");
+            for(i=0;i<a.length;i++)
+            {
+                document.write(a[i]+" ");
+                if(a[i]>max)
+                {
+                    max = a[i];
+                }
+            }
+            document.write("<br>greatest number:-"+max);
+        }
+        function mainFun(){
+            maxFun(5,10,5,7,3);
+            maxFun(3,9,9,45,6,34,68,3,20);
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="mainFun()">Show</button>
+</body>
+</html>

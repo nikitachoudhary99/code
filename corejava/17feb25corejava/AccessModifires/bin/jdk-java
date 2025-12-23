@@ -1,0 +1,105 @@
+
+
+JDK : Java Development Kit
+
+JRE : Java Runtime Environment
+
+JVM : Java Virtual Machine(Interpreter of Java)
+	-Compiled Language(c,c++)
+	-Interpreted Language(java,python)
+
+API : Application Programing Interface(library)
+
+
+JDK	: API + Compiler +JVM
+
+JRE	: API + JVM
+
+
+
+
+Data Types : 
+
+1)Primitive
+	-byte
+	-short
+	-int
+	-long
+	-char
+	-float
+	-double
+	-boolean	
+2)Non-Primitive
+	-Array
+	-Class
+	-Interface
+	
+Primitive Data Types : 
+1)Integer (123,-250)
+	-byte
+	-short
+	-int
+	-long
+2)Floating Point(45.23,-567.23)
+	-float
+	-double
+
+3)Character('a','A','@','4')
+	-char
+	
+4)Boolean(true/false)
+	-boolean
+	
+
+
+Integer : 
+keyword		memory		range
+-byte			1 byte			-128, 0, +127
+
+-short			2 bytes			-32768, 0, +32767
+
+-int				4 bytes			-/+ 10 digits 
+
+-long  			8 bytes			-/+ 19 digits 
+
+
+Character:
+-char			2 bytes			0, 65535
+
+Character Code : 
+c/c++ : ASCII 1 byte
+(American Standerd code for information interchanged)
+
+Java : Uni Code 2 byte
+0, 255 - English Characters
+
+Floating Point:
+-float			4 bytes			-/+ 10 digits
+
+-double			8 bytes			-/+19 digits
+
+Note : In java all floating point constants are double type by default.
+
+c/c++ :
+
+float f = 1.5; ok
+		float
+
+Java : 
+float f = 1.5; error
+		double
+float f = 1.5f; ok
+float f = (float)1.5; ok
+doube f = 1.5; ok
+
+Boolean : 
+-boolean		1 byte			true/false
+
+boolean b = true;
+
+
+
+
+
+
+

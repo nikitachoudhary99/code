@@ -1,0 +1,27 @@
+<!-- map() function:-Used to get data from array of collection,it automatically manage loop and manage one by one element of array.Map function can read object from array-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map function</title>
+    <script>
+        function show(){
+            var myList=[
+                {rno:101,sname:"Anjali",marks:500},
+                {rno:102,sname:"Anamika",marks:500},
+                {rno:103,sname:"Annu",marks:300},
+                {rno:104,sname:"Ansika",marks:400},
+                {rno:105,sname:"Aman",marks:580},
+            ];
+            myList.map((item)=>{
+                document.write(item.rno+" "+item.sname+" "+item.marks+"<br>");
+            })
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="show()">Show</button>
+</body>
+</html>

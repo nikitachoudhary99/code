@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <!-- Store 10 number in array and find greatest -->
+     <script>
+        function findMax(){
+            var arr = [21,14,10,78,32,59,41,89,90,100];
+            var i,max;
+            max=arr[0];
+            for(i=1;i<10;i++)
+            {
+                if(arr[i]>max)
+                {
+                    max = arr[i];
+                }
+            }
+            document.write("<br> Output Array:-<br>"+arr);
+            document.write("<br> Greatest Number in Array:- "+max);
+        }
+     </script>
+</head>
+<body>
+    <button type="submit" onclick="findMax()">Find</button>
+</body>
+</html>

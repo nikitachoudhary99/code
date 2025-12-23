@@ -1,0 +1,33 @@
+<!-- Object type array:- Used to store mutiple objects.
+ 
+syntax:-
+var objarrayname=[{key:value,---},{key:value----},----]
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Type Array</title>
+    <script>
+        function showFun(){
+            var i;
+            var slist=[
+            {rno:101,sname:"Neha",smarks:400},
+            {rno:102,sname:"shyam",smarks:450},
+            {rno:103,sname:"Aman",smarks:580},
+            {rno:104,sname:"Nimrit",smarks:600},
+            {rno:105,sname:"Nikhil",smarks:300},
+            {rno:106,sname:"Nikita",smarks:350},
+            ];
+            for( i=0;i<slist.length;i++)
+            {
+                document.write(slist[i].rno+" "+slist[i].sname+" "+slist[i].smarks+"<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="showFun()">Show</button>
+</body>
+</html>

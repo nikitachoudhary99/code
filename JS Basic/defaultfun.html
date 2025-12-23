@@ -1,0 +1,38 @@
+<!-- default argument function:- In java Script user defined function we can set the default value for arguments
+ of a function.
+ 
+ syntax:-
+
+ function functionName(argumentname=initialvalue,--)
+{
+---
+--- 
+}
+ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default function</title>
+    <script>
+        function sumFun(a=10,b=20){
+            var c;
+            document.write("<br> value of a = "+a);
+            document.write("<br> value of b = "+b);
+            c = a+b;
+            document.write("<br> Sum of a and b = "+c);
+
+        }
+        function mainFun(){
+            sumFun();
+            sumFun(5);
+            sumFun(50,80);
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="mainFun()">Show</button>
+</body>
+</html>

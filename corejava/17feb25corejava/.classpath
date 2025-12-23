@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="UserJar/src/|Interfaces/src/|AccessModifires/src/|StringBuffBuildJoiner/src/|Swing2/src/|OOPSS/src/|PackageDemo/src/|Swing1/src/|FileIO/src/|Strings/src/|MultiThreading/src/|GUIDemo/src/|Exceptionss/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="AccessModifires/src"/>
+	<classpathentry kind="src" path="Exceptionss/src"/>
+	<classpathentry kind="src" path="FileIO/src"/>
+	<classpathentry kind="src" path="GUIDemo/src"/>
+	<classpathentry kind="src" path="Interfaces/src"/>
+	<classpathentry kind="src" path="MultiThreading/src"/>
+	<classpathentry kind="src" path="OOPSS/src"/>
+	<classpathentry kind="src" path="PackageDemo/src"/>
+	<classpathentry kind="src" path="StringBuffBuildJoiner/src"/>
+	<classpathentry kind="src" path="Strings/src"/>
+	<classpathentry kind="src" path="Swing1/src"/>
+	<classpathentry kind="src" path="Swing2/src"/>
+	<classpathentry kind="src" path="UserJar/src"/>
+	<classpathentry kind="output" path="AccessModifires/bin"/>
+</classpath>

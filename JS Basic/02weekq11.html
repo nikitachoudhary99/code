@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ice Cream Selector</title>
+</head>
+<body>
+
+  <h2>Choose your favorite ice cream flavor</h2>
+
+  <label for="flavors">Flavors:</label>
+  <select id="flavors" onchange="updateTextbox()">
+    <option value="" disabled selected>Select a flavor</option>
+    <option value="Chocolate">Chocolate</option>
+    <option value="Vanilla">Vanilla</option>
+    <option value="Strawberry">Strawberry</option>
+    <option value="Mint">Mint</option>
+  </select>
+
+  <br><br>
+
+  <input type="text" id="messageBox" readonly>
+
+  <script>
+    function updateTextbox() {
+      const select = document.getElementById('flavors');
+      const flavor = select.value;
+      document.getElementById('messageBox').value = "You picked " + flavor + ".";
+    }
+  </script>
+
+</body>
+</html>

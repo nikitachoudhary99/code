@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+    <script>
+    function  sumFun(){
+        var a,b,c,choice;
+        choice=1
+        while(choice==1)
+        {
+            a=parseInt(prompt("Enter value of a"));
+            b=parseInt(prompt("Enter value of b"));
+            c=a+b;
+            alert("Sum of a and b "+c);
+
+            choice=parseInt(prompt("Do you want to Add again press 1"));
+        }
+    }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="sumFun()">Check</button>
+</body>
+</html>

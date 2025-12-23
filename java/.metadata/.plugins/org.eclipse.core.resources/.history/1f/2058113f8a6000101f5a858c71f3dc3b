@@ -1,0 +1,30 @@
+package com.univ;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.ak.Entity.CreateProfile;
+import com.ak.Entity.Profile;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Configuration cfg=new Configuration();
+    	cfg.configure("hbm.cfg.xml");
+    	SessionFactory sf=cfg.buildSessionFactory();
+    	Session session =sf.openSession();
+    	Transaction tnx=session.beginTransaction();
+    	Profile p1=new Profile(101,"nikita","mca","2nd sem");
+    	CreateProfile c1=new CreateProfile(102,"neha","bijalpur",20,45742);
+    	p1.setMyId(c1);
+    	session.save();
+    
+    }
+}

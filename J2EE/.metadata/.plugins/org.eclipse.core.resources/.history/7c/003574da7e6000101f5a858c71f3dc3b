@@ -1,0 +1,9 @@
+package com.ak.Entity;
+
+public class Profile {
+  private int Id;
+  private String name;
+  private String Sub;
+  private String Clas;
+  
+}

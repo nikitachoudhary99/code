@@ -1,0 +1,47 @@
+<!-- 
+    JSON and AJAX
+    JSON:- JAVA Script object notation.json is object type data and 
+    it is used to transfer the data over the network.
+    json is comprassed data format.
+
+    AJAX:- asynchronous java script and xml.
+    ajax is used to send partial request from client to server and
+    receive response from server to client.
+
+    AJAX provide some predefine function like:-
+    1. XMLTTPREQUESt.:-It is inbuilt class and used to send request from client server
+    function availabel in this classes:-
+
+    2open():- inbutil function used to connect any file or web api to get response.
+
+    3.send():-inbuilt function to send response to client.
+
+    4.onreadystateChange:-inbuilt property,used to check.
+    documnet or web application state is it ready or not for reading data.
+    if end point is in ready condition it return 4 means 4 is ready state code.and
+    200 is ok code end point is successfully return response.
+    
+
+-->
+    <!-- AJAX example to load json data from API  -->
+
+<html>
+    <body>
+        <div id="demo">
+            <h1>Load Data From API</h1>
+            <button type="submit" onclick="loadDoc()">Load Content</button>
+        </div>
+        <script>
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest(); //create object
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "https://jsonplaceholder.typicode.com/comments",true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

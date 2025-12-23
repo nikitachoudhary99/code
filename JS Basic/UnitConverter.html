@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Length Converter (IF–ELSE Only)</title>
+<style>
+    body { font-family: Arial; padding: 25px; background: #f5f5f5; }
+    .box { background:#fff; padding:20px; max-width:450px;
+           border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    .row { display:flex; gap:10px; margin-top:15px; }
+    input, select {
+        flex:1; padding:10px; font-size:16px; border:1px solid #aaa;
+        border-radius:6px;
+    }
+</style>
+</head>
+<body>
+
+<h2>unit converter</h2>
+
+<div class="box">
+
+    <div class="row">
+        <input id="in1" type="number" value="1">
+        <select id="u1">
+            <option value="km">Kilometer</option>
+            <option value="m">Meter</option>
+            <option value="cm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+            <option value="um">Micrometer</option>
+            <option value="nm">Nanometer</option>
+            <option value="mi">Mile</option>
+            <option value="yd">Yard</option>
+            <option value="ft">Foot</option>
+            <option value="in">Inch</option>
+            <option value="nmi">Nautical Mile</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <input id="in2" type="number" value="1">
+        <select id="u2">
+            <option value="km">Kilometer</option>
+            <option value="m">Meter</option>
+            <option value="cm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+            <option value="um">Micrometer</option>
+            <option value="nm">Nanometer</option>
+            <option value="mi">Mile</option>
+            <option value="yd">Yard</option>
+            <<option value="ft">Foot</option>
+            <option value="in">Inch</option>
+            <option value="nmi">Nautical Mile</option>
+        </select>
+    </div>
+
+</div>
+
+<script>
+
+
+function convertForward() {
+    let v = parseFloat(in1.value);
+    let from = u1.value;
+    let to = u2.value;
+
+    // STEP 1: Convert from ANY → meters
+    let meter = v;
+
+    if (from == "km") meter = v * 1000;
+    else if (from == "m") meter = v;
+    else if (from == "cm") meter = v * 0.01;
+    else if (from == "mm") meter = v * 0.001;
+    else if (from == "um") meter = v * 1e-6;
+    else if (from == "nm") meter = v * 1e-9;
+    else if (from == "mi") meter = v * 1609.344;
+    else if (from == "yd") meter = v * 0.9144;
+    else if (from == "ft") meter = v * 0.3048;
+    else if (from == "in") meter = v * 0.0254;
+    else if (from == "nmi") meter = v * 1852;
+
+    // STEP 2: Convert meters → target
+    let out = meter;
+
+    if (to == "km") out = meter / 1000;
+    else if (to == "m") out = meter;
+    else if (to == "cm") out = meter / 0.01;
+    else if (to == "mm") out = meter / 0.001;
+    else if (to == "um") out = meter / 1e-6;
+    else if (to == "nm") out = meter / 1e-9;
+    else if (to == "mi") out = meter / 1609.344;
+    else if (to == "yd") out = meter / 0.9144;
+    else if (to == "ft") out = meter / 0.3048;
+    else if (to == "in") out = meter / 0.0254;
+    else if (to == "nmi") out = meter / 1852;
+
+    in2.value = out;
+}
+
+function convertReverse() {
+    let v = parseFloat(in2.value);
+    let from = u2.value;
+    let to = u1.value;
+
+    // TARGET → METERS
+    let meter = v;
+
+    if (from == "km") meter = v * 1000;
+    else if (from == "m") meter = v;
+    else if (from == "cm") meter = v * 0.01;
+    else if (from == "mm") meter = v * 0.001;
+    else if (from == "um") meter = v * 1e-6;
+    else if (from == "nm") meter = v * 1e-9;
+    else if (from == "mi") meter = v * 1609.344;
+    else if (from == "yd") meter = v * 0.9144;
+    else if (from == "ft") meter = v * 0.3048;
+    else if (from == "in") meter = v * 0.0254;
+    else if (from == "nmi") meter = v * 1852;
+
+    // METERS → BASE
+    let out = meter;
+
+    if (to == "km") out = meter / 1000;
+    else if (to == "m") out = meter;
+    else if (to == "cm") out = meter / 0.01;
+    else if (to == "mm") out = meter / 0.001;
+    else if (to == "um") out = meter / 1e-6;
+    else if (to == "nm") out = meter / 1e-9;
+    else if (to == "mi") out = meter / 1609.344;
+    else if (to == "yd") out = meter / 0.9144;
+    else if (to == "ft") out = meter / 0.3048;
+    else if (to == "in") out = meter / 0.0254;
+    else if (to == "nmi") out = meter / 1852;
+
+    in1.value = out;
+}
+
+// EVENTS
+in1.oninput = convertForward;
+u1.onchange = convertForward;
+u2.onchange = convertForward;
+
+in2.oninput = convertReverse;
+
+// Initial run
+convertForward();
+
+</script>
+
+</body>
+</html>

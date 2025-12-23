@@ -1,0 +1,40 @@
+import java.util.*;
+class Shop
+{
+  public static void main(String args[])
+   { 
+    int book;
+    double price,dis,totalprice,disAmt,finalprice; 
+   Scanner sc=new Scanner(System.in);
+   
+   System.out.println("enter no of books");
+   book=sc.nextInt();
+   
+   System.out.println("enter price of one book");
+   price=sc.nextDouble();
+   
+   totalprice=ook*price;
+   dis=0;
+   if(book<20)
+   {
+    dis=5;
+   }
+   else if(book<50)
+   {
+     dis=10;
+   }
+    else if(dis<100)
+    { 
+      dis=15;
+    }
+    else
+    {
+      dis=20;
+    }
+  disAmt=(dis/100)*totalprice;
+  finalprice=totalprice-disAmt;
+  System.out.println("total price before dis"+totalprice);
+  System.out.println("dis applied "+dis+"%");
+  System.out.println("total price after dis"+finalprice);
+ }
+}

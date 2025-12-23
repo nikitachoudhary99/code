@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Table</title>
+    <script>
+        function printTable(){
+            var num,i,t;
+            num = parseInt(document.getElementById("tb1").value);
+            i=1;
+            while(i<=10)
+            {
+                t = num*i;
+                document.write(t+"<br>");
+                i++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Enter Number <input type="text" id="tb1" /></p>
+    <button type="submit" onclick="printTable()">Print</button>
+</body>
+</html>

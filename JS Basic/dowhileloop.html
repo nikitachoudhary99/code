@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+    <!-- example do while loop controlling by increment -->
+     <script>
+        function sumFun(){
+            var i=1,num,sum=0;
+            num=parseInt(document.getElementById("tb1").value);
+            do{
+                sum=sum+i;
+                i++;
+            }while(i<=num)
+            document.getElementById("tb2").value=sum;
+        }
+     </script>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td>Enter the value of num</td>
+                <td>
+                    <input type="text" id="tb1" />
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text" id="tb2" />
+                </td>
+            </tr>
+            <tr>
+                <td>Click Here</td>
+                <td>
+                    <button type="submit" onclick="sumFun()">Sum</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+    
+</body>
+</html>

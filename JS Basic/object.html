@@ -1,0 +1,36 @@
+<!-- 
+ object type:- collection of multiple types of data.
+ it manage data by key and value pair.
+ 
+ synatx:-
+ var objectname={
+ key:value,
+ ---
+ ---
+
+ };
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        function myFun(){
+            var emp={
+                    ecode:101,
+                    ename:"Trapti",
+                    esal:40000
+            };
+            document.write("<br> Employee Code= "+emp.ecode);
+            document.write("<br> Employee Name= "+emp.ename);
+            document.write("<br> Employee Salary= "+emp.esal);
+        }
+    </script>
+ </head>
+ <body>
+    <button type="submit" onclick="myFun()">Show</button>
+ </body>
+ </html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM-oneToOne-App11\src\main\java"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM-Criteria-pp6"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM-HQLApp3\src\main\java\com\univ\App3.java"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM-HQLApp3"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM4\src\main\java\com\univ\HBM4\App.java"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HBM3\src\main\java\NewFile.xml"/>
+			<item value="C:\Users\BETU\Desktop\coading\J2EE\HibernateConfig\pom.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.univ"/>
+			<item value="com.univ.Inheritance1"/>
+		</list>
+		<list key="groupId">
+			<item value="com.univ"/>
+		</list>
+		<list key="artifactId">
+			<item value="OneToMany-table"/>
+			<item value="OnetoOne-table"/>
+			<item value="Inheritance1"/>
+			<item value="Inheritence"/>
+			<item value="OneToOne1"/>
+			<item value="OneToOneEx"/>
+			<item value="One-To-One-App"/>
+			<item value="HBM-oneToOne-App11"/>
+			<item value="HBM-Single-Table-App8"/>
+			<item value="HBM-Criteria-App7"/>
+			<item value="Product"/>
+			<item value="HBM-HQLApp6Add"/>
+			<item value="HBM-HQLApp5"/>
+			<item value="HBM-HQLApp1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

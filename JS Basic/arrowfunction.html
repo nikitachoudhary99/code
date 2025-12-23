@@ -1,0 +1,62 @@
+<!-- Arrow Function:- Execute by reference.arrow function also known as anonymous function.
+ arrowfunction process by reference by so it will save execution time.arrow function execute 
+ fast as compare to normal function -->
+
+<!-- Syntax:- define arrow function-
+ var referencename =(argumentsname) =>
+{
+    statement
+    ----
+    ----
+ }
+calling of arrow function:-
+referencename(argumentname); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <script>
+        var sum=(a,b)=>{
+            var c=a+b;
+            document.getElementById("tb3").value=c;
+        }
+        function mainFun(){
+            var a,b;
+            a=parseInt(document.getElementById("tb1").value);
+            b=parseInt(document.getElementById("tb2").value);
+            sum(a,b);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter the value of a</td>
+            <td>
+                <input type="text" id="tb1" />
+            </td>
+        </tr>
+        <tr>
+            <td>Enter the value of b</td>
+            <td>
+                <input type="text" id="tb2" />
+            </td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td>
+                <input type="text" id="tb3" />
+            </td>
+        </tr>
+        <tr>
+            <td>Click Here</td>
+            <td>
+                <button type="submit" onclick="mainFun()">Check</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for Loop</title>
+    <!-- print table of given number -->
+     <script>
+        function table(){
+        var num,i,t;
+        num=parseInt(document.getElementById("tb1").value);
+        for(i=1;i<=10;i++)
+        {
+            t=num*i;
+            document.write(t+"<br>");
+        }
+
+    }
+    
+     </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter given number</td>
+            <td>
+                <input type="text" id="tb1" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="table()">Check</button>
+            </td>
+        </tr>
+            
+    </table>
+</body>
+</html>

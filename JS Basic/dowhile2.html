@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do while loop</title>
+    <!-- example do while loop controlling by user input -->
+     <script>
+        function sumFun(){
+            var num,sum=0;
+            do{
+                num=parseInt(prompt("Enter value of n"));
+                sum=sum+num;
+            }while(num!=0)
+            document.write("sum is"+sum);
+        }
+     </script>
+</head>
+<body>
+    <button type="submit" onclick="sumFun()">Sum</button>
+</body>
+</html>

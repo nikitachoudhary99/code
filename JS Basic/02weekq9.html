@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ice Cream Preference</title>
+</head>
+<body>
+
+  <h2>Select your ice cream flavor</h2>
+
+  <form id="iceCreamForm">
+    <input type="checkbox" id="chocolate"> Chocolate<br>
+    <input type="checkbox" id="vanilla"> Vanilla<br><br>
+    <button type="button" onclick="checkOrder()">Check Order</button>
+  </form>
+
+  <script>
+    function checkOrder() {
+      const chocolate = document.getElementById('chocolate').checked;
+      const vanilla = document.getElementById('vanilla').checked;
+      let message = "";
+
+      if (chocolate && vanilla) {
+        message = "You like both chocolate and vanilla";
+      } else if (chocolate) {
+        message = "You like chocolate";
+      } else if (vanilla) {
+        message = "You like vanilla";
+      } else {
+        message = "Pick one";
+      }
+
+      alert(message);
+
+      // Uncheck both boxes after alert is dismissed
+      document.getElementById('chocolate').checked = false;
+      document.getElementById('vanilla').checked = false;
+    }
+  </script>
+
+</body>
+</html>

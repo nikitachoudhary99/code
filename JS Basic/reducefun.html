@@ -1,0 +1,46 @@
+<!-- reduce function:-
+ The Reduce() method executes for array element. 
+ The Reduce() method returns a single value:the function's accumulated result.
+ The Reduce() method does not execute the function for empty array elements.
+ The Reduce() method  does not change the original value.
+ 
+ Note:-
+ At the first callback,there is no return value from the previous callback.
+ normally,array element 0 is used as initial value, and the iteration start from array element 1.
+
+ If an initial value is suppiled,this is used,and the iteration start from array element 0.
+ 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show1(){
+            var a=[500,100,50];
+            document.write("Reducer Function Result "+a.reduce(myfun1));
+        }
+        function myfun1(total,num){
+            return total-num;
+        }
+        function show2(){
+            var a=[5,13,6,12,17];
+            document.write("Reducer Function Result "+a.reduce(myfun2));
+
+        }
+        function myfun2(total,num){
+            return total+num;
+        }
+    </script>
+ </head>
+ <body>
+    <button type="submit" onclick="show1()">Reducer Function</button>
+    <button type="submit" onclick="show2()">Reducer Function</button>
+ </body>
+ </html>
+ 
+ 
+ 

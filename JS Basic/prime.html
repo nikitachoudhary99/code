@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+    <script>
+        function primeFun(){
+            var num,i,count=0;
+            num=parseInt(document.getElementById("tb1").value);
+            for(i=1;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+            {
+                document.getElementById("tb2").value="Prime";
+            }
+            else
+            {
+                document.getElementById("tb2").value="Not Prime";
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <td>Enter The Number</td>
+                <td>
+                    <input type="text" id="tb1" />
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <input type="text" id="tb2" />
+                </td>
+            </tr>
+            <tr>
+                <td>Click Here</td>
+                <td>
+                    <button type="submit" onclick="primeFun()">Check</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

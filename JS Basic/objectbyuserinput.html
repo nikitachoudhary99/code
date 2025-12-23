@@ -1,0 +1,29 @@
+<!-- Read user input in object typr -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <script>
+        function showFun(){
+            var student={
+                rno:parseInt(document.getElementById("tb1").value),
+                sname:document.getElementById("tb2").value,
+                marks:parseInt(document.getElementById("tb3").value),
+            };
+            document.getElementById("p1").innerText="Student Details:-"
+            +student.rno+" "+student.sname+" "+student.marks;
+        }
+    </script>
+ </head>
+ <body>
+    <p>Enter RollNo <input type="text" id="tb1" /></p>
+    <p>Enter Name <input type="text" id="tb2" /></p>
+    <p>Enter Marks <input type="text" id="tb3" /></p>
+
+    <button type="submit" onclick="showFun()">Show</button>
+    <p id="p1">
+    </p>
+ </body>
+ </html>

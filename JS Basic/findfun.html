@@ -1,0 +1,29 @@
+<!--
+The find() method returns the single value of the element that passes a test.
+The find() method executes a function for each array element.but it is return single value
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Function</title>
+    <script>
+        var a = [5,3,6,10,3,11];
+        function checkEven(n){
+            if(n%2==0)
+            {
+                return n;
+            }
+        }
+        function myFun(){
+            var res1=a.find(checkEven)
+            document.write(res1);
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="myFun()">SHOW</button>
+</body>
+</html>

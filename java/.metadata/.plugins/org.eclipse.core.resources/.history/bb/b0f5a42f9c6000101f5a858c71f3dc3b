@@ -1,0 +1,68 @@
+package com.ak.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+@Entity
+@Table(name="createPro")
+public class CreateProfile {
+	@Id
+	@OneToOne
+	@JoinColumn(name="MyId",unique=true)
+ private int id;
+ private String name;
+ private String Add;
+ private int age;
+ private int mob;
+public CreateProfile() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public CreateProfile(int id, String name, String add, int age, int mob) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.Add = add;
+	this.age = age;
+	this.mob = mob;
+	
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAdd() {
+	return Add;
+}
+public void setAdd(String add) {
+	Add = add;
+}
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	this.age = age;
+}
+public int getMob() {
+	return mob;
+}
+public void setMob(int mob) {
+	this.mob = mob;
+}
+
+@Override
+public String toString() {
+	return  id + "\t" + name + "\t" + Add + "\t" + age + "\t" + mob ;
+}
+ 
+}

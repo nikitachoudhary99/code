@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of array</title>
+    <!-- Example addition of two array -->
+    <script>
+        function addFun(){
+            var arr1 = [10,9,8,7,6,5,4,3,2,1];
+            var arr2 = [1,2,3,4,5,6,7,8,9,10];
+            var arr3 = [];
+            var i;
+            for(i=0;i<10;i++)
+            {
+                arr3[i] = arr1[i] + arr2[i];
+            }
+            document.write("<br> Output First Array:-<br>");
+            document.write(arr1);
+
+            document.write("<br> Output Second Array:-<br>");
+            document.write(arr2);
+
+            document.write("<br> Output Third Array:-<br>");
+            document.write(arr3);
+        }
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="addFun()">Add</button>
+</body>
+</html>

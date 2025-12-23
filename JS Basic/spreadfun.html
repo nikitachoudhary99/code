@@ -1,0 +1,46 @@
+<!-- 
+spread function or three dot function:- in java script function we can pass n number of arguments in a funtion.
+
+syntax:-
+
+function functionName(...arguments)
+{
+----
+----
+----
+}
+
+it creates array of arguments for a function
+-->
+
+<!-- example spread function -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Function</title>
+    <script>
+        function sumFun(...a){
+            var i,sum=0;
+            document.write("<br> List of argumnets:-");
+            for(i=0;i<a.length;i++)
+            {
+                document.write(a[i]+" ");
+                sum = sum+a[i];
+            }
+            document.write("<br> sum of arguments:-"+sum);
+        }
+        function Mainfun(){
+            sumFun();//calling with 0 argument
+            sumFun(5);//calling with 1 argument
+            sumFun(3,9);//calling with 2 argument
+            sumFun(5,2,3);//calling with 3 argument
+            sumFun(7,5,1,9,8,4);//calling with 6 argument
+        }
+    </script>
+ </head>
+ <body>
+    <button type="submit" onclick="Mainfun()">Show</button>
+ </body>
+ </html>

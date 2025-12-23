@@ -1,0 +1,16 @@
+
+User Input : 
+Scanner class is used to get input from user.
+
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+
+sc.nextByte()
+sc.nextShort()
+sc.nextInt()
+sc.nextLong()
+sc.nextFlost()
+sc.nextDouble()
+sc.next()
+sc.nextLine()

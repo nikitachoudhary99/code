@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Click Example</title>
+  <style>
+    img {
+      width: 150px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click an image to see the word</h2>
+
+  <img src="./images/javascript-logo (1).png" onclick="showWord('JavaScript')">
+  <img src="./images/node js.png" onclick="showWord('Node.js')">
+  <img src="./images/expressimages.png" onclick="showWord('Express js')">
+  <img src="./images/react-1-logo-png-transparent.png" onclick="showWord('React js')">
+
+  <br><br>
+
+  <textarea id="wordBox" rows="4" cols="30" placeholder="Click an image..."></textarea>
+
+  <script>
+    function showWord(word) {
+      document.getElementById('wordBox').value = word;
+    }
+
+    // Set focus to the text area when page loads
+    window.onload = function() {
+      document.getElementById('wordBox').focus();
+    };
+  </script>
+
+</body>
+</html>

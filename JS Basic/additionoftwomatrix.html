@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        function addFun(){
+            var a =[[1,2,3],[4,5,6],[7,8,9]];
+            var b=[[9,8,7],[6,5,4],[3,2,1]];
+            var c=[[],[],[]];
+            var i,j;
+            for(i=0;i<3;i++)
+            {
+            for(j=0;j<3;j++)
+            {
+              c[i][j]=a[i][j]*b[i][j];     
+            }
+            }
+            document.write("<br> output first matrix <br>");
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    document.write(a[i][j]+" ");
+                }
+                document.write("<br>");
+            }
+            document.write("<br> output second matrix <br>");
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    document.write(b[i][j]+" ");
+                }
+                document.write("<br>");
+            }
+            document.write("<br> output third matrix <br>");
+            for(i=0;i<3;i++)
+            {
+                for(j=0;j<3;j++)
+                {
+                    document.write(c[i][j]+" ");
+                }
+                document.write("<br>");
+            }
+
+}
+    </script>
+</head>
+<body>
+    <button type="submit" onclick="addFun()">Add</button>
+</body>
+</html>
