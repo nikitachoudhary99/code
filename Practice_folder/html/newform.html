@@ -1,0 +1,187 @@
+<html>
+<head>
+    <script language="javascript">
+        function validation(aform) {
+            if (aform.userid.value == "") {
+                alert("Please enter userid");
+                aform.userid.focus();
+                return false;
+            }
+            if (aform.password.value == "") {
+                alert("Please enter password");
+                aform.password.focus();
+                return false;
+            }
+            if (aform.username.value == "") {
+                alert("Please enter fullname");
+                aform.username.focus();
+                return false;
+            }
+            if (aform.panno.value == "") {
+                alert("Please enter PAN No.");
+                aform.panno.focus();
+                return false;
+            }
+            if (aform.emailid.value == "") {
+                alert("Please enter emailid");
+                aform.emailid.focus();
+                return false;
+            }
+            if (aform.aadhar.value == "") {
+                alert("Please enter aadhar");
+                aform.aadhar.focus();
+                return false;
+            }
+            if (aform.city.value == "") {
+                alert("Please enter city");
+                aform.city.focus();
+                return false;
+            }
+            if (aform.state.value == "") {
+                alert("Please enter state");
+                aform.state.focus();
+                return false;
+            }
+            if (aform.pincode.value == "") {
+                alert("Please enter pincode");
+                aform.pincode.focus();
+                return false;
+            }
+            if (aform.acctno.value == "") {
+                alert("Please enter account number");
+                aform.acctno.focus();
+                return false;
+            }
+            if (aform.branchname.value == "") {
+                alert("Please enter branch name");
+                aform.branchname.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function checkformat(aform) {
+            if (aform.emailid.value != "") {
+                var atPos = aform.emailid.value.indexOf('@');
+                var dotPos = aform.emailid.value.indexOf('.', atPos);
+                if (atPos == -1 || dotPos == -1) {
+                    alert("Please enter emailid (format: a@b.c)");
+                    aform.emailid.focus();
+                    return false;
+                }
+            }
+        }
+
+        function checklen(aform) {
+            if (aform.password.value != "") {
+                if (aform.password.value.length < 8) {
+                    alert("Password must be at least 8 characters.");
+                    aform.password.focus();
+                    return false;
+                }
+            }
+            if (aform.pincode.value != "") {
+                if (isNaN(aform.pincode.value)) {
+                    alert("Pincode must be numeric.");
+                    aform.pincode.focus();
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body bgColor="#ffffff">
+    <p>New User Sign up:</p>
+    <form name="newuser" method="post" action="NewUserSubmit.jsp">
+        <table width="470" border="3">
+            <tr>
+                <td width="109">User ID <font color="black">*</font></td>
+                <td width="345"><input type="text" name="userid" id="userid"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id="password" onBlur="checklen(this.form)"></td>
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td>PAN No.</td>
+                <td><input type="text" name="panno" id="panno"></td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td><input name="emailid" type="text" id="emailid" size="37" onBlur="checkformat(this.form)"></td>
+            </tr>
+            <tr>
+                <td>Aadhar No.</td>
+                <td><input type="text" name="aadhar" id="aadhar"></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td>
+                    <select name="day"><option value="1">1</option><option value="2">2</option></select>
+                    <select name="month"><option value="1">January</option><option value="2">February</option></select>
+                    <select name="year">
+                        <option value="2002" selected>2002</option>
+                        <option value="2001">2001</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Contact No</td>
+                <td><input type="text" name="contactno" id="contactno"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="addr" cols="36" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city" id="city"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="state" id="state"></td>
+            </tr>
+            <tr>
+                <td>Pin Code</td>
+                <td><input type="text" name="pincode" id="pincode" onBlur="checklen(this.form)"></td>
+            </tr>
+            <tr>
+                <td>Bank Name</td>
+                <td>
+                    <select name="bankname">
+                        <option value="ICICI">ICICI</option>
+                        <option value="UTI">UTI</option>
+                        <option value="HSBC">HSBC</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Account No</td>
+                <td><input type="text" name="acctno" id="acctno"></td>
+            </tr>
+            <tr>
+                <td>Branch Name</td>
+                <td><input type="text" name="branchname" id="branchname"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" onClick="return validation(this.form)"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

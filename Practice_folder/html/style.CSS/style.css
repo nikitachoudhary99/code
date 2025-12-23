@@ -1,0 +1,69 @@
+
+/*class selectorHTML */
+.selectorHTML{
+
+    color: rgba(36, 7, 104, 0.651);
+    
+}
+#mainheading{
+    background: #db0f0f;
+    color: rgb(4, 4, 83);
+    text-overflow: ellipsis;
+}
+h1{
+    background: #db0f0f;
+    color: rgb(4, 4, 83);
+    text-overflow: ellipsis;
+}
+
+
+/* combinatorsel.html */
+h1{
+    color: black;
+
+}
+div h1{
+    background: beige;
+}
+/* for child selector */
+div>h1{
+    border: 2px;
+    border-radius: 1px;
+
+}
+div span h1{
+    border: 3px dotted white;
+
+}
+
+.selector{
+    height: 100vh;
+    background-image: url("https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* flex.html */
+h1{
+    background: fixed;
+    color: bisque;
+    font-weight: 200;
+    font-style: italic;
+}
+.flexHTML{
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.marriageflex{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width: 50vw;
+    
+}
+

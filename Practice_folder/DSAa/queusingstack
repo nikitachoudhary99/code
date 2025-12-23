@@ -1,0 +1,35 @@
+
+#include<iostream>
+using namespace std;
+#include<stack>
+class que{
+    stack<int> pst;
+    int stack<int> sst;
+     public:
+     void push(int n);
+     int front();
+     bool empty();
+     int back();
+     int top();
+     int pop();
+}
+void que::push(int n)
+{
+    st.push();
+}
+bool que::empty()
+{
+    st.empty();
+    return true;
+}
+int que::pop()
+{
+ 
+    st.pop();
+}
+
+
+int main()
+{
+
+}
