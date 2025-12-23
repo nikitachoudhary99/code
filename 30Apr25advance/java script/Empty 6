@@ -1,0 +1,29 @@
+
+a = 10;
+b = 20
+
+a = a+b
+a+=b;
+
+a = a-b
+a-=b;
+
+a = a*b
+a*=b
+
+a = a/b
+a/=b
+
+a = a%b
+a%=b;
+
+Ternary Conditional op
+
+(condition ? true : false)
+
+a = 10
+b = 20
+
+(a > b ? document.write(a) : document.write(b));
+Arithmetic assignment op
++=,-=,*=,/=,%=

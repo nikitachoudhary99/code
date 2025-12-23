@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Java Script Demo</title>
+<script>
+function add()
+{
+var a = parseInt(prompt("Enter value of a:"));
+var b = parseInt(prompt("Enter value of b:"));
+var c;
+c = a+b;
+document.write("Sum = "+c);
+}
+function sub()
+{
+var a = parseInt(prompt("Enter value of a:"));
+var b = parseInt(prompt("Enter value of b:"));
+var c;
+c = a-b;
+document.write("Sum = "+c);
+}
+function multi()
+{
+var a = parseInt(prompt("Enter value of a:"));
+var b = parseInt(prompt("Enter value of b:"));
+var c;
+c = a*b;
+document.write("Sum = "+c);
+}
+function div()
+{
+var a = parseInt(prompt("Enter value of a:"));
+var b = parseInt(prompt("Enter value of b:"));
+var c;
+c = a/b;
+document.write("Sum = "+c);
+}
+
+</script>
+</head>
+<body>
+<h1>This is heading displayed by Html.</H1>
+<input type="submit" value="Add" onclick="add()">
+<input type="button" value="Sub" onclick="sub()">
+<button onclick="multi()">Multi</button>
+</body>
+</html>

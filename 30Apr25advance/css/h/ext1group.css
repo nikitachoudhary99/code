@@ -1,0 +1,25 @@
+body{
+    background-color: burlywood;
+}
+h1,h2,h3,p{
+    text-align: left;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    border-style: inset;
+}
+h1{
+    background-color: aqua;
+}
+h2{
+    background-color: hsl(271, 76%, 53%);
+}
+h3{
+    background-color: rgb(43, 226, 73);
+}
+.para1{
+    background-color: #0080ff;
+}
+.para2{
+    background-color: color(srgb-linear red green blue);
+}

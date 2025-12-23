@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function addition()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+//var a = (document.getElementById("t1").value);
+//var b = (document.getElementById("t2").value);
+var c = a+b;
+document.write("Sum = "+c);
+}
+
+</script>
+</head>
+<body>
+Number1<input type="text" id="t1"><br>
+Number2<input type="text" id="t2"><br>
+Result<input type="text"  id="t3"><br>
+<input type="submit" value ="Add" onclick="addition()">
+</body>
+</html> 

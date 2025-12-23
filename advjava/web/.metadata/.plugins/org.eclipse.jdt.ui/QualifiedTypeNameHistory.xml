@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.pojo.Product"/>
+    <fullyQualifiedTypeName name="com.dao.ProductDao"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.ak.dao.userinfodao"/>
+    <fullyQualifiedTypeName name="com.ak.daoimpl.UserInfoDaoimpl"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="com.blog.dao.UserDao"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.impl.IOFileUploadException"/>
+    <fullyQualifiedTypeName name="com.blog.daoimpl.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="com.ak.dao.Userdao"/>
+    <fullyQualifiedTypeName name="com.ak.pojo.Blog"/>
+    <fullyQualifiedTypeName name="com.ak.daoimpl.BlogDaoImpl"/>
+    <fullyQualifiedTypeName name="com.ak.daoimpl.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="com.ak.dao.BlogDao"/>
+    <fullyQualifiedTypeName name="com.ak.daoimpl.DBConnection"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+    <fullyQualifiedTypeName name="com.ak.dao.AdminDao.AdminDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.ak.pojo.User"/>
+</qualifiedTypeNameHistroy>

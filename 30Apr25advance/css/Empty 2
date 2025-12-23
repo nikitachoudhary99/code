@@ -1,0 +1,32 @@
+<p id="para">
+<p class="classss">
+
+By Element:
+p{
+property:value;
+property:value;
+}
+
+By Id:
+#para{
+property:value;
+property:value;
+}
+
+By class:
+.classss{
+property:value;
+property:value;
+}
+
+<p style="property:value;property:value;">Fitrst Para</p>
+<p>Second Para</p>
+
+
+
+
+
+
+
+
+

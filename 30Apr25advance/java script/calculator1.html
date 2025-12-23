@@ -1,0 +1,75 @@
+<html>
+<head>
+<script>
+function add(x,y)
+{
+var a= parseInt(x);
+var b= parseInt(y);
+
+//var a= (document.getElementById("t1").value);
+//var b= (document.getElementById("t2").value);
+
+var c =a+b;
+//document.write("Answer = "+c);
+document.getElementById("t3").value=c;
+}
+function sub(x,y)
+{
+var a= parseInt(x);
+var b= parseInt(y);
+
+//var a= (document.getElementById("t1").value);
+//var b= (document.getElementById("t2").value);
+
+var c =a-b;
+//document.write("Answer = "+c);
+document.getElementById("t3").value=c;
+}
+function multi(x,y)
+{
+var a= parseInt(x);
+var b= parseInt(y);
+
+//var a= (document.getElementById("t1").value);
+//var b= (document.getElementById("t2").value);
+
+var c =a*b;
+//document.write("Answer = "+c);
+document.getElementById("t3").value=c;
+}
+function div(x,y)
+{
+var a= parseInt(x);
+var b= parseInt(y);
+
+//var a= (document.getElementById("t1").value);
+//var b= (document.getElementById("t2").value);
+
+var c =a/b;
+//document.write("Answer = "+c);
+document.getElementById("t3").value=c;
+}
+
+</script>
+</head>
+<body>
+<center>
+<h1>Calculator</h1>
+
+<hr>
+<br><br><br><br><br><br><br><br><br><br><br>
+Number1<input type=text id="t1"><br><br>
+Number2<input type=text id="t2"><br><br>
+Result<input type=text id="t3"><br><br>
+<button type="button" onclick="add(document.getElementById('t1').value,document.getElementById('t2').value)">
+Add</button>
+<button type="button" onclick="sub(document.getElementById('t1').value,document.getElementById('t2').value)">Sub</button>
+<button type="button" onclick="multi(document.getElementById('t1').value,document.getElementById('t2').value)">Multi</button>
+<button type="button" onclick="div(document.getElementById('t1').value,document.getElementById('t2').value)">Div</button>
+<input type="reset">
+<br><br><br><br><br><br><br><br><br><br>
+
+<hr>
+</center>
+</body>
+</html> 

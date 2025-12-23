@@ -1,0 +1,10 @@
+Function : 
+it is a block of code , will execute when it will call.
+Syntax:
+
+function ftrname(parameter )
+{
+statement.....
+statement.....
+statement.....
+}

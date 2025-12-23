@@ -1,0 +1,41 @@
+
+<html>
+<head>
+<script>
+
+function counting()
+{
+var m= parseInt(document.getElementById("t1").value);
+var n= parseInt(document.getElementById("t2").value);
+var result="";
+for(i=m; i<=n; i++)
+{
+//document.write("&nbsp"+i);
+result=result+" "+i;
+}
+
+for(i=m; i>=n; i--)
+{
+//document.write("&nbsp"+i);
+result=result+" "+i;
+}
+document.getElementById("show").innerHTML=result;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Calculator</h1>
+<center>
+<hr>
+<br><br><br><br><br><br><br><br><br><br><br>
+Number1<input type=text  id="t1"><br><br>
+Number2<input type=text  id="t2"><br>
+<p id="show"></p>
+<button type="button" onclick="counting()">Count</button>
+<br><br><br><br><br><br><br><br><br><br>
+
+<hr>
+
+</body>
+</html> 

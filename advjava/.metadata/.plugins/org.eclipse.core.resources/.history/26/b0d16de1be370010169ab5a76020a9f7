@@ -1,0 +1,40 @@
+package jdbcDemo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class CURDOperation {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("not connected");
+		}
+		try {
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/30apr25ad?user=root&password=mishthu99");
+			System.out.println("connected");
+			Statement stml=con.createStatement();
+			
+			stml.executeUpdate("inset into gamer values(15,'raj',1566855,'indore')");
+			System.out.println("inserted");
+			
+			stml.executeUpdate("delete from gamer where id=12");
+			System.out.println("deleted");
+			
+			
+			stml.executeUpdate("update from gamer where id=12");
+			System.out.println("updated");
+			
+			con.close();
+			stml.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+	}
+
+}

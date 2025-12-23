@@ -1,0 +1,52 @@
+
+Exception : Unexpected cores and conditions
+
+Error : program will not execute.
+
+Exception : running program will terminate unexpectedly.
+
+1)Compile Time 
+	physical or syntactical errors.
+	
+2)Run time
+	a = 10/0;
+	
+*ArithmeticException / by zero
+*ArrayIndexOutOfBoundsException
+*NumberFormatException
+String s="234d";
+int x = Integer.parseInt(s);
+
+*InteruptedEcpetion
+*SQLException
+*FileNotFoundException
+
+3)Logical
+	unexpected outputs.
+	
+Java Exceptions : 
+
+1)Checked Exception
+	-Compile Time
+	-Run time
+
+2)Unchecked Exception
+	-Logical Exception
+	
+What To Do In Exception Handling : 
+-stop program termination
+-stop display error code to user
+-show an user uderstandable message to user screen.
+
+
+Exception Handling Techniques:
+
+1)try-cath
+2)multiple catch block
+3)universal catch block
+4)finally
+5)throw
+6)throws
+
+
+

@@ -1,0 +1,17 @@
+body{
+    background-color: azure;
+}
+#head{
+    background-color: blueviolet;
+    border: 2px;
+    border-style: double;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+}
+#para{
+    text-align: center;
+    border-color: black;
+    background-color: aqua;
+    font-size: 20px;
+}

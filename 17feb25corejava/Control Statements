@@ -1,0 +1,40 @@
+
+Conditional Statements : 
+1)If : 
+if(condition)
+{
+statements....;
+}
+
+2)If-Else:
+
+if(condition)
+{
+true;
+}
+else
+{
+false;
+}
+
+3)Nested If Else: 
+Ex : find divission by using percentage marks.
+
+per>=60	I Div
+
+per>=45	II Div
+
+per>=33	III Div
+
+per<33		FAIL
+
+
+Iterative Process : 
+Loop's : 
+
+for:
+
+
+ 
+
+

@@ -1,0 +1,11 @@
+Loops:
+1.for
+2.while
+3.do-while
+
+For Loop:
+initial   condition    inc/dec
+for(start;   stop;     step)
+{
+statements....
+}

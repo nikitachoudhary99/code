@@ -1,0 +1,16 @@
+
+
+<script>
+document.write("hello");
+document.write("<h1>hello</h>");
+document.write("<p>hello</p>");
+</script>'
+
+
+var a=10;
+let b=23;
+c = 30;
+
+a = 10;
+a = 1.5;
+

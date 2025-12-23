@@ -1,0 +1,12 @@
+body{
+    background-color: burlywood;
+}
+.i1{
+    text-align: center;
+    color: cornflowerblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+p{
+    font-size: 100px;
+}

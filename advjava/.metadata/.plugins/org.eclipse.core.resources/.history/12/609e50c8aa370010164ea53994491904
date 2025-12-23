@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class TwoDArray1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int arr[][]=new int[3][3];
+		int i,j;
+		System.out.println("Enter "+ (3*3) + "values");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.println(arr[i][j]);	
+			}
+		}
+				//for reverse arry
+	    int n;
+		System.out.println("enter the the value of n");
+		n=sc.nextInt();
+		for(i=n;i>=0;i--)
+		{
+			for(j=n;j>=0;j--)
+			{				System.out.println(arr[i][j]);
+			}
+	}
+
+
+	}
+
+}

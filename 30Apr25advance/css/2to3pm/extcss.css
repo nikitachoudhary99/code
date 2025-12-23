@@ -1,0 +1,21 @@
+body{
+    background-color: #deb887;
+}
+h1{
+    border: solid;
+    background-color: black;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+p{
+    background-color: blue;
+    color: aqua;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+hr{
+    padding: 20px;
+    background-color: chocolate;
+}

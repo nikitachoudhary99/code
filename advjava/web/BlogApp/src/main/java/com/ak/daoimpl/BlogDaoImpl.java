@@ -1,0 +1,131 @@
+package com.ak.daoimpl;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ak.dao.BlogDao;
+
+import com.ak.pojo.Blog;
+
+public class BlogDaoImpl implements BlogDao {
+
+	   private Connection con;
+
+	    public BlogDaoImpl() {
+	        try {
+	            Class.forName("com.mysql.cj.jdbc.Driver");
+	            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/blogmng", "root", "mishthu99");
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+    @Override
+    public boolean add(Blog b) {
+        try {
+            String sql = "INSERT INTO blogs (title, content, user_id) VALUES (?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, b.getTitle());
+            ps.setString(2, b.getContent());
+            ps.setInt(3, b.getUserId());
+            return ps.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public Blog getById(int id) {
+        try {
+            String sql = "SELECT * FROM blogs WHERE id = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                Blog b = new Blog();
+                b.setId(rs.getInt("id"));
+                b.setTitle(rs.getString("title"));
+                b.setContent(rs.getString("content"));
+                b.setUserId(rs.getInt("user_id"));
+                return b;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Blog> getByUser(int userId) {
+        List<Blog> list = new ArrayList<>();
+        try {
+            String sql = "SELECT * FROM blogs WHERE user_id = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, userId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Blog b = new Blog();
+                b.setId(rs.getInt("id"));
+                b.setTitle(rs.getString("title"));
+                b.setContent(rs.getString("content"));
+                b.setUserId(rs.getInt("user_id"));
+                list.add(b);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    @Override
+    public boolean update(Blog b) {
+        try {
+            String sql = "UPDATE blogs SET title = ?, content = ? WHERE id = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, b.getTitle());
+            ps.setString(2, b.getContent());
+            ps.setInt(3, b.getId());
+            return ps.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public boolean delete(int id) {
+        try {
+            String sql = "DELETE FROM blogs WHERE id = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            return ps.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public List<Blog> getAll() {
+        List<Blog> list = new ArrayList<>();
+        try {
+            String sql = "SELECT b.*, u.name FROM blogs b JOIN users u ON b.user_id = u.id ORDER BY b.id DESC";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Blog b = new Blog();
+                b.setId(rs.getInt("id"));
+                b.setTitle(rs.getString("title"));
+                b.setContent(rs.getString("content"));
+                b.setUserId(rs.getInt("user_id"));
+                
+                list.add(b);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+}

@@ -1,0 +1,21 @@
+
+Syntax : 
+
+By Element:
+element{
+property:value;
+property:value;
+}
+
+By Id:
+#id{
+property:value;
+property:value;
+}
+
+By Class:
+.class{
+property:value;
+property:value;
+}
+

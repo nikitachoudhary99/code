@@ -1,0 +1,19 @@
+body {
+ background-image:url(Desert.jpg);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+h1 {
+    color: red;
+    text-align: right;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: #3F43E2;
+}
+

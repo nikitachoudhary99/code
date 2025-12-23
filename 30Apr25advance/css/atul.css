@@ -1,0 +1,16 @@
+body 
+{
+ background:yellow;
+}
+
+h2 {
+    color: rgb(0,0,0);
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: rgb(111,116,178);
+}
+

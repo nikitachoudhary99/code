@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Add Demo</title>
+</head>
+<body>
+<script>
+var a = parseInt(prompt("Enter a value:",""));
+var isprime=true;
+var i;
+for(i=2; i<a; i++)
+{
+if(a%i==0)
+{
+isprime=false;
+}
+}
+if(isprime==true)
+{
+document.write(a+" is prime no");
+}
+else
+{
+document.write(a+" is not prime no");
+}
+</script>
+</body>
+</html>

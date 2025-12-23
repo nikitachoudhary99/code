@@ -1,0 +1,81 @@
+Steps To Create Mavan Application:
+
+1. Create Mavan Project
+2. Add Mavan Core Dependancy
+	-spring-contaxt
+	-spring-hivernate-core
+	-MySql Mavan Dependancy
+3. Create Persistence bean/Entity class
+4. Create hibernate.cfg.xml
+5. Create main the class that retrieves or stores the persistent object.
+
+POM.xml
+POM stands for "Project Object Model". It is an XML representation of a Maven project held in a file named pom. xml . When in the presence of Maven folks, speaking of a project is speaking in the philosophical sense, beyond a mere collection of files containing code.
+
+
+-->Create Configuration Object
+import org.hibernate.cfg.Configuration;
+Configuration cfg = new Configuration();
+
+-->Configur hibernate.cfg.xml file
+cfg.configure("hibernate.cfg.xml");
+
+
+
+/hbm-1-app/src/main/java/com/jee/entity/Employee.java
+
+
+-->Create SessionFectry Object
+SessionFactory factory = cfg.buildSessionFactory();
+
+-->Create Session Object
+Session session = factory.openSession();
+
+-->Create Transection object
+Transaction tnx = session.beginTransaction();
+
+-->Create Persistence bean class
+Employee e = new Employee();
+and set values by using seter method or constructor.
+
+-->Call Following methods
+
+session.save(e);
+tnx.commit();
+
+session.close()
+factory.close()
+
+
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.3.15.Final</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.32</version>
+</dependency>
+
+
+
+
+
+
+
+
+
+
+
+hbm.cfg.xml
+
+
+
+
+

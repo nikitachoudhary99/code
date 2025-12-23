@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(221, 242, 247);
+}
+#id1,#id2,#para1,#para2{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    font-size: 30px;
+    text-align: left;
+}

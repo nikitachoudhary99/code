@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(205, 157, 178);
+}
+h1{
+    background-color: blueviolet;
+    color: yellow;
+    border: solid;
+    border-color: red;
+    border-radius: 30px;
+}
+p{
+    background-color: coral;
+    border: dashed;
+    border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}

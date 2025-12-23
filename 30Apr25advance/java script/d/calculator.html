@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            Calculator By Functions
+        </title>
+        <script>
+            function add()
+            {
+ var a = parseInt(document.getElementById("t1").value);
+ var b = parseInt(document.getElementById("t2").value);
+ var c = a+b;
+ //document.write("Sum = "+c);
+               document.getElementById("t3").value=c;
+            }
+            function sub()
+            {
+               var a = parseInt(document.getElementById("t1").value);
+               var b = parseInt(document.getElementById("t2").value);
+               var c = a-b;
+               //document.write("Sum = "+c);
+               document.getElementById("t3").value=c;
+            }
+            function multi()
+            {
+               var a = parseInt(document.getElementById("t1").value);
+               var b = parseInt(document.getElementById("t2").value);
+               var c = a*b;
+               //document.write("Sum = "+c);
+               document.getElementById("t3").value=c;
+            }
+            function div()
+            {
+               var a = parseInt(document.getElementById("t1").value);
+               var b = parseInt(document.getElementById("t2").value);
+               var c = a/b;
+               //document.write("Sum = "+c);
+               document.getElementById("t3").value=c;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+           <h1> Universal Calculator</h1>
+           <br>
+           <br>
+           <br>
+           <hr>
+           <table>
+            <tr>
+                <td>
+                    Number1
+                </td>
+                <td>
+                    <input type="text" id="t1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Number2
+                </td>
+                <td>
+                    <input type="text" id="t2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Result
+                </td>
+                <td>
+                    <input type="text" id="t3">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <input type="submit" onclick="add()" value="Add">
+                <input type="submit" onclick="sub()" value="Sub">
+                <input type="submit" onclick="multi()" value="Mult">
+                <input type="submit" onclick="div()" value="Div">
+                </td>
+            </tr>
+           </table>
+        </center>
+    </body>
+</html>

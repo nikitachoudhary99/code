@@ -1,0 +1,19 @@
+body{
+    background-color: bisque;
+}
+#div1{
+    width: 1300px;
+    padding: 35px;
+    background-color: cornflowerblue;
+    
+}
+#head1{
+    color: burlywood;
+    font-size: 40px;
+    text-align: center;
+}
+#para1{
+    color: burlywood;
+    font-size: 20px;
+    text-align: center;
+}

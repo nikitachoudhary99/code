@@ -1,0 +1,33 @@
+<html>
+   <head>
+     
+      <script type="text/javascript">
+         function student(first, last)
+         {
+            var faltu;
+document.write ("Inside student.........<br>");
+            faltu = first + last;
+            return faltu;
+         }
+         
+         function secondFunction()
+         {
+            var result;
+            document.write ("Start..........<br>");
+          result = student('Nalayak ', 'Students');
+            document.write ("Stop..........<br>");
+            document.write (result );
+         }
+      </script>
+   
+   </head>   
+   <body>
+      <p>Click the following button to call the function</p>
+      <form>
+<input type="button" onclick="secondFunction()" value="Call Function">
+      </form>   
+      <p>Use different parameters inside the function and then try...</p>
+  
+  </body>
+</html>
+

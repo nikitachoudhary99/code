@@ -1,0 +1,20 @@
+body{
+    background-color: burlywood;
+}
+.head1{
+    background-color: chartreuse;
+    color: brown;
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 6px;
+    border-color: blue;
+}
+.head2{
+    background-color: brown;
+    color: yellow;
+    border: 10px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

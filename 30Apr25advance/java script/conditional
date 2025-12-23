@@ -1,0 +1,32 @@
+Conditiona Statemnts:
+1.if
+
+2.if-else
+3.nested if-else
+if:
+syntax:
+
+if(condition)
+{
+statements....
+}
+relationa op:
+a<b
+
+if-else:
+
+if(condition)
+{
+true;
+}
+else
+{
+false
+}
+
+Nested If-Else:
+*Find Division By Using Percentage Marks;
+p>=60   I Div
+p>=45   II Div
+p>=33   III Div
+p<33    Fail

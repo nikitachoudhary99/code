@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Kisan Lal Calci</title>
+<script>
+function add()
+{
+a = parseInt(document.getElementById("t1").value);
+b = parseInt(document.getElementById("t2").value);
+c = a+b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+document.getElementById("result").innerHTML="Sum ="+c;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Kishan Lal Calci</h1>
+<hr>
+<br><br><br><br><br>
+Number1<input type="text" id="t1"><br><br>
+Number2<input type="text" id="t2"><br><br>
+Result <input type="text" id="t3"><br><br>
+<p id="result"></p>
+<input type="submit" value="Add" onclick="add()">
+<br><br><br>
+</center>
+</body>
+</html>
+
+
+

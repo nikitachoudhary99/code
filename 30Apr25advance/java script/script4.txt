@@ -1,0 +1,28 @@
+
+<html>
+<head>
+<script>
+
+function pgdca()
+{
+document.getElementById("abcd").innerHTML="My First Program";
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+a = document.getElementById("t1");
+b = document.getElementById("t2");
+document.write(a+b);
+}
+
+</script>
+</head>
+
+
+
+
+<body>
+<input type=text id="t1"><br>
+<input type=text id="t2"><br>
+<h1 id="abcd">My Web Page</h1>
+<p id="demo">Please Change The containts</p>
+<button type="button" onclick="pgdca()">Try it</button>
+</body>
+</html> 

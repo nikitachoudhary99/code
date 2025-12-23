@@ -1,0 +1,73 @@
+
+Conditional Statements:
+
+1. if
+2. if-else
+
+if(condition)
+{
+statements..;
+}
+
+
+if-else:
+
+if(condition)
+{
+true;
+}
+else
+{
+false;
+}
+
+Loop:
+
+1.for
+2.while
+3.do-while
+
+for(start; stop; step)
+{
+statements.;
+}
+
+counting from 1 to 10.
+start = 1
+stop = 10
+step  = +1
+
+
+While:
+
+start;
+while(stop)
+{
+statements;
+step;
+}
+
+
+Do - While:
+
+start;
+do
+{
+statements;
+step;
+}while(stop);
+
+
+for, while : Entry Control Loops
+
+do-while : Exit Control Loop
+
+
+Function:
+
+syntax:
+function name(parameter list)
+{
+statements..;
+}
+

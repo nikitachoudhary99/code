@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- Three Args Const -->
+    <bean class="com.univ.bean.Address" name="adr">
+		<constructor-arg>
+			<value>112</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Bhawarkuna</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Indore</value>
+		</constructor-arg>
+    </bean>
+    <!-- Two Args Const -->
+    <bean class="com.univ.bean.Address" name="adr1">
+		<constructor-arg>
+			<value>Bhawarkuna</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Indore</value>
+		</constructor-arg>
+    </bean>
+	<!-- One Args Const -->
+    <bean class="com.univ.bean.Address" name="adr2">
+		<constructor-arg>
+			<value>Indore</value>
+		</constructor-arg>
+    </bean>
+    <!-- One Args Const -->
+    <bean class="com.univ.bean.Address" name="adr3">
+		
+    </bean>
+    
+</beans>

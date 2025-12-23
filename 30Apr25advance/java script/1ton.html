@@ -1,0 +1,25 @@
+<html>
+   <body>
+      
+      <script>
+
+function counting()
+{
+            var count = 1;   //start
+ var n = parseInt(document.getElementById("t1").value);
+            document.write("Starting Loop <br>");
+         
+            while (count <=n)//stop
+            {
+document.write("Current Count : " + count + "<br />");
+               count++;   //step
+            }
+         
+            document.write("Loop stopped!");
+}       
+      </script>
+Enter Limit Of Counting:<input type="text" id="t1"><br>
+<input type="submit" onclick="counting()" value="Show Counting"><br>
+      <p>Set the variable to different value and then try...</p>
+   </body>
+</html>

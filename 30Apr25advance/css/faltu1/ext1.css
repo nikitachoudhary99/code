@@ -1,0 +1,22 @@
+body{
+    background-image: url(Desert.jpg);
+    background-repeat: no-repeat;
+    border: double;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.head1{
+    border: 5px solid color(srgb red green blue);
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.para1{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: azure;
+    color: hsla(236, 100%, 50%, 0.252);   
+}

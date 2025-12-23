@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Calculator</title>
+<script>
+function add(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c;
+c = a+b;
+document.getElementById("t3").value=c;
+}
+function sub(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c;
+c = a-b;
+document.getElementById("t3").value=c;
+}
+function multi(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c;
+c = a*b;
+document.getElementById("t3").value=c;
+}
+function div(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c;
+c = a/b;
+document.getElementById("t3").value=c;
+}
+</script>	
+</head>
+<body>
+<center>
+<h1>Universal Calculator</h1>
+<br>
+<br>
+<hr>
+<br><br><br><br><br><br>
+Number1<input type="text" id="t1"><br><br>
+Number2<input type="text" id="t2"><br><br>
+Result <input type="text" id="t3"><br><br>
+<input type="submit" value="Add" onclick="add(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="submit" value="Sub" onclick="sub(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="submit" value="Multi" onclick="multi(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="submit" value="Div" onclick="div(document.getElementById('t1').value,document.getElementById('t2').value)">
+</center>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+
+JSP Tags : 
+
+1)Scripting Tags
+	-scriplet tag
+		<% Java Code %>
+		for scripting java code in jsp page.
+		
+	-expression tag
+		<%= expression %>
+		
+	-declaration tag
+		<%! variable and method declaration %>
+		
+
+A list of the 9 implicit objects is given below:
+Object				Type
+
+out					PrintWriter
+request				HttpServletRequest
+response			HttpServletResponse
+session				HttpSession
+config				ServletConfig
+application			ServletContext
+pageContext		PageContext
+page				Object
+exception			Throwable
+
+	
+	

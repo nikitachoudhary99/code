@@ -1,0 +1,23 @@
+body{
+    background-color: cornflowerblue;
+}
+h1{
+    font-size: 40px;
+    background-color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid yellow;
+    text-align: center;
+    
+}
+h6{
+    font-size: 20px;
+    background-color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid rgb(255, 0, 115);
+    text-align: center;
+}
+p{
+    font-size: 30px;
+    border: double red;
+    font-family: 'Times New Roman', Times, serif;
+}

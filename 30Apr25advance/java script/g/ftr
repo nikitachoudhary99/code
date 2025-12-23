@@ -1,0 +1,7 @@
+syntax:
+
+function ftrname(parameter)
+{
+statements....
+return value;
+}

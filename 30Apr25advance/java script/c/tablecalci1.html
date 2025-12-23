@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>
+Calci
+</title>
+<script>
+function calculat()
+{
+var roll = document.getElementById("t1").value;
+var name = document.getElementById("t2").value;
+var pmarks = parseInt(document.getElementById("t3").value);
+var cmarks = parseInt(document.getElementById("t4").value);
+var mmarks = parseInt(document.getElementById("t5").value);
+var total = pmarks+cmarks+mmarks;
+var per = (total/3);
+var div;
+if(per>=60)
+{
+div = "I Div";
+}
+else
+{
+	if(per>=45)
+	{
+	div = "II Div";
+	}
+	else
+	{
+		if(per>=33)
+		{
+		div = "III Div";
+		}
+		else
+		{
+		div = "FAIL";
+		}
+	}
+}
+document.getElementById("a1").innerHTML = roll;
+document.getElementById("a2").innerHTML = name;
+document.getElementById("a3").innerHTML = pmarks;
+document.getElementById("a4").innerHTML = cmarks;
+document.getElementById("a5").innerHTML = mmarks;
+document.getElementById("a6").innerHTML = total;
+document.getElementById("a7").innerHTML = per;
+document.getElementById("a8").innerHTML = div;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Calculator Demo</h1>
+<hr>
+<table border=1>
+<tr>
+<td>Rollno</td>
+<td><input type="text" id="t1"></td>
+</tr>
+<tr>
+<td>Name</td>
+<td><input type="text" id="t2"></td>
+</tr>
+<tr>
+<td>Physics Marks</td>
+<td><input type="text" id="t3"></td>
+</tr>
+<tr>
+<td>Chemistry Marks</td>
+<td><input type="text" id="t4"></td>
+</tr>
+<tr>
+<td>Math Marks</td>
+<td><input type="text" id="t5"></td>
+</tr>
+<tr>
+<td colspan=2><input type="button" onclick="calculat()" value="Show Result">
+</td>
+</tr>
+</table>
+<table border=2>
+<caption>Student Result</caption>
+<tr>
+<td>Rollno</td>
+<td>Name</td>
+<td>P-Marks</td>
+<td>C-Marks</td>
+<td>M-Marks</td>
+<td>Total Marks</td>
+<td>Percentage</td>
+<td>Division</td>
+</tr>
+<tr>
+<td id ="a1">Rollno</td>
+<td id ="a2">Name</td>
+<td id ="a3">P-Marks</td>
+<td id ="a4">C-Marks</td>
+<td id ="a5">M-Marks</td>
+<td id ="a6">Total Marks</td>
+<td id ="a7">Percentage</td>
+<td id ="a8">Division</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+
+

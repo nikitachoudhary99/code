@@ -1,0 +1,58 @@
+<html>
+<heaD>
+<title>Calculator Demo</title>
+<script>
+function add()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a+b;
+document.getElementById("t3").value=c;
+}
+function sub()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a-b;
+document.getElementById("t3").value=c;
+}
+function multi()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a*b;
+document.getElementById("t3").value=c;
+}
+function div()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a/b;
+document.getElementById("t3").value=c;
+}
+
+</script>
+</head>
+<body>
+<center>
+<h1>Universal Informetics</h1>
+<br><br><br><br>
+<hr>
+Number1<input type="text" id="t1"><br><br>
+Number2<input type="text" id="t2"><br><br>
+Result<input type="text" id="t3"><br><br>
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="Sub" onclick="sub()">
+<input type="button" value="Multi" onclick="multi()">
+<input type="button" value="Div" onclick="div()">
+
+<br><br><br><br><br><br><br>
+<hr>
+<address>
+Universal Informetics,<br>
+Race Course Road,<br>
+Indore,M.P.<br>
+</address>
+</center>
+</body>
+</html>

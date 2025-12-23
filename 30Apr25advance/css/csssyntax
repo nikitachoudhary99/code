@@ -1,0 +1,33 @@
+syntax
+
+selector{
+property : value;
+property : value;
+}
+
+Example:
+Element/ID/Class :
+body{
+bgcolor:green;
+}
+
+p
+{
+align:center;
+color:red;
+}
+
+<p id = "mypara">This is Id Demo</p>
+
+#mypara
+{
+align:center;
+color:red;
+}
+
+<p class = "mypara">This is Class Demo</p>
+.mypara
+{
+align:center;
+color:red;
+}

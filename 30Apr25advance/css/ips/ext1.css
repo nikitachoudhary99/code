@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(205, 157, 178);
+}
+#id1{
+    background-color: blueviolet;
+    color: yellow;
+    border: solid;
+    border-color: red;
+    border-radius: 30px;
+}
+#id2{
+    background-color: coral;
+    border: dashed;
+    border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+#id3{
+    background-color: rgb(73, 226, 43);
+    color: yellow;
+    border: solid;
+    border-color: red;
+    border-radius: 30px;
+}
+#id4{
+    background-color: rgb(255, 80, 232);
+    border: dashed;
+    border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}

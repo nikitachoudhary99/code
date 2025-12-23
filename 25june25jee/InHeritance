@@ -1,0 +1,67 @@
+
+Inheritance Strategy : 
+1)Single Table Per class : Create One table for all classes.
+
+Employee
+empId 
+empName
+salary
+
+Manager
+mgrId
+dept
+
+Clerk
+ta
+da
+
+empId empName salary mgrid dept ta da
+
+2)Table per sub class : Create one separate table for each class.
+Employee
+empId 
+empName
+salary
+
+Manager
+mgrId
+dept
+
+Clerk
+ta
+da
+
+ 
+emp
+empId empname salary
+
+mgr
+empId mgrId dept
+
+clr
+empId ta da
+
+
+3)Table Per concreate class : No table for abstract class or interface.
+
+abstract Employee
+empId 
+empName
+salary
+
+Manager
+mgrId
+dept
+
+Clerk
+ta
+da
+
+mgr
+empid empName salary mgrId dept
+
+clr
+empId empName salary ta da
+
+
+

@@ -1,0 +1,16 @@
+body{
+    background-color: chocolate;
+}
+#head1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: azure;
+    font-size: 30px;
+    border: solid blue;
+}
+#para1{
+    border: double yellow;
+    text-align: right;
+    background-color: yellowgreen;
+    color: red;
+}

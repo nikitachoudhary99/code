@@ -1,0 +1,17 @@
+body{
+    background-color: chocolate;
+}
+.head1{
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(31, 235, 235);
+    font-size: 30px;
+    border: solid blue;
+}
+.para1{
+    border: double rgb(32, 32, 8);
+    text-align: right;
+    background-color: rgb(226, 248, 28);
+    color: red;
+}

@@ -1,0 +1,10 @@
+INDEX VERSION 1.134+C:\Users\BETU\Desktop\coading\advjava\.metadata\.plugins\org.eclipse.jdt.core
+3782665152.index
+841792454.index
+4030853197.index
+3194592474.index
+2090319832.index
+2510609146.index
+1288848795.index
+1865797976.index
+2150071815.index

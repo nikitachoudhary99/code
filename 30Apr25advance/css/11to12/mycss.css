@@ -1,0 +1,14 @@
+body{
+    background-color: chocolate;
+}
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: azure;
+    font-size: 30px;
+}
+`{
+    text-align: right;
+    background-color: yellowgreen;
+    color: red;
+}

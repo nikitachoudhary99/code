@@ -1,0 +1,87 @@
+Arithmetic Op:
++,-,*,/,%,++,--
+
+5 = 10/2  quotient
+
+0 = 10%2;  reminder
+
+Relational Op:
+<,>,<=,>=,==,!=
+
+a = 10
+b = 20
+
+(a>b) false
+(a<b) true
+
+Logical Op:
+&&(and),||(or), !(not)
+
+a=true;
+b=false;
+&& : both are true final result will true
+
+(a&&b)  = false
+
+|| : one or both are true result will true
+(a||b)   = true
+
+Arithmetic Assignement:
++=,-=,*=,/=,%=
+
+=  assignement op
+== comparisiont op
+a = 10
+b = 20
+
+a = a+b;  a = 30
+a +=b;
+
+a = a-b;  
+a -=b;
+
+Bitwise Op:
+&(and),|(or),<<(left shift),>>(right shift),~(comliment)
+
+&:
+0+0=0
+0+1=0
+1+0=0
+1+1=1
+
+15 = 1111
+5  = 0101
+............
+     0101
+
+
+|:
+0+0=0
+0+1=1
+1+0=1
+1+1=1
+
+15    1111
+ 5    0101
+ ---------
+      1111
+      
+<< :
+15<<2= 00001111
+
+00111100 = 60
+
+>> :
+
+15>>2   00001111
+
+00000011  = 3
+
+
+~15 +1 and change the sign
+
+~15 = -16
+~-16 +1
+ = 15
+ 
+ 

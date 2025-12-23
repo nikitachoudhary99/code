@@ -1,0 +1,17 @@
+body{
+    background-image: url(download.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hd{
+    text-align: center;
+    color: rgb(180, 194, 70);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.para1,.para2{
+    text-align: center;
+    color: rgb(25, 246, 13);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}

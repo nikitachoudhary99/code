@@ -1,0 +1,18 @@
+
+
+<input type="text"> textfield
+password		passwordfield
+checkbox		checkbox
+radio		radiobutton
+button		button
+submit		button
+reset		resetbutton
+date		date
+datetime-local	date and time
+numeric		numericfield
+week		week
+time		time
+email		email
+file		file
+
+

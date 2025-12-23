@@ -1,0 +1,16 @@
+SWITCH - CASE:
+
+switch(var)
+{
+	case 1:
+	statements..;
+	break;
+	case 2:
+	statements..;
+	break;
+	case n:
+	statements..;
+	break;
+	default:
+	statements..;
+}

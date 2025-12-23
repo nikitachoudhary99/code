@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+            Calculator By Functions
+        </title>
+        <script>
+            function add(x,y)
+            {
+            var a = parseInt(x);
+            var b = parseInt(y);
+            var c = a+b;
+            document.getElementById("t3").value=c;
+            }
+            function sub(x,y)
+            {
+            var a = parseInt(x);
+            var b = parseInt(y);
+            var c = a-b;
+            document.getElementById("t3").value=c;
+            }
+            function multi(x,y)
+            {
+            var a = parseInt(x);
+            var b = parseInt(y);
+            var c = a*b;
+            document.getElementById("t3").value=c;
+            }
+            function div(x,y)
+            {
+            var a = parseInt(x);
+            var b = parseInt(y);
+            var c = a/b;
+            document.getElementById("t3").value=c;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+           <h1> Universal Calculator</h1>
+           <br>
+           <br>
+           <br>
+           <hr>
+           <table>
+            <tr>
+                <td>
+                    Number1
+                </td>
+                <td>
+                    <input type="text" id="t1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Number2
+                </td>
+                <td>
+                    <input type="text" id="t2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Result
+                </td>
+                <td>
+                    <input type="text" id="t3">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+<input type="submit" onclick="add(document.getElementById('t1').value,document.getElementById('t2').value)" value="Add">
+                <input type="submit" onclick="sub(document.getElementById('t1').value,document.getElementById('t2').value)" value="Sub">
+                <input type="submit" onclick="multi(document.getElementById('t1').value,document.getElementById('t2').value)" value="Mult">
+                <input type="submit" onclick="div(document.getElementById('t1').value,document.getElementById('t2').value)" value="Div">
+                </td>
+            </tr>
+           </table>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Calculator</title>
+<script>
+function add()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+c = a+b;
+document.getElementById("t3").value=c;
+}
+function sub()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+c = a-b;
+document.getElementById("t3").value=c;
+}
+
+function multi()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+c = a*b;
+document.getElementById("t3").value=c;
+}
+
+function div()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+c = a/b;
+document.getElementById("t3").value=c;
+}
+
+</script>
+</head>
+<body>
+<center>
+<h1>Universal Informetics</h1>
+<hr>
+<br><br><br><br><br><br>
+Number1<input type="text" id="t1" ><br><br>
+Number2<input type="text" id="t2" ><br><br>
+Result<input type="text" id="t3" ><br><br>
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="Sub" onclick="sub()">
+<input type="button" value="Multi" onclick="multi()">
+<input type="button" value="Div" onclick="div()">
+<br><br><br><br><br><br>
+<hr>
+<address>Universal Informetics<br>
+Abhay Prashal<br>
+Race Course Road, Indore.
+</address>
+</center>
+</body>
+</html>

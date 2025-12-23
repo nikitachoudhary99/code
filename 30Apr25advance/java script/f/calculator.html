@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Calculator</title>
+<script>
+function add()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseFloat(document.getElementById("t2").value);
+var c = a+b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+function sub()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseFloat(document.getElementById("t2").value);
+var c = a-b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+
+function multi()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseFloat(document.getElementById("t2").value);
+var c = a*b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+function div()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseFloat(document.getElementById("t2").value);
+var c = a/b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Universal Calculator</h1>
+<br><br>
+<hr>
+<br><br>
+<label>Number1</label>
+<input type="text" id="t1"><br><br>
+<label>Number2</label>
+<input type="text" id="t2"><br><br>
+<label>Result</label>
+<input type="text" id="t3"><br><br>
+<input type="submit" value="Add" onclick="add()">
+<input type="submit" value="Sub" onclick="sub()">
+<input type="submit" value="Mulit" onclick="multi()">
+<input type="submit" value="Div" onclick="div()">
+<br><br><br>
+<hr>
+</body>
+</html>

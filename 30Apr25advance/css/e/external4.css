@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(221, 242, 247);
+}
+h1,h2,h3,p{
+    text-align: right;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+    background-color: blue;
+}

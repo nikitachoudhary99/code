@@ -1,0 +1,13 @@
+127.0.0.1 - - [04/Jun/2025:11:16:06 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:16:07 +0530] "GET /Univ5/Login.jsp HTTP/1.1" 200 2005
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:16:07 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:16:24 +0530] "POST /Univ5/checkuser.jsp HTTP/1.1" 200 947
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:16:30 +0530] "GET /Univ5/amdproduct.jsp HTTP/1.1" 200 2083
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:16:54 +0530] "GET /Univ5/Save.jsp?pid=166&pname=nikita&price=56089&b1=Add+Product HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:16:59 +0530] "GET /Univ5/amdproduct.jsp HTTP/1.1" 200 2083
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:17:17 +0530] "GET /Univ5/Save.jsp?pid=166&pname=mic&price=600&b1=Update+Product HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:17:20 +0530] "GET /Univ5/amdproduct.jsp HTTP/1.1" 200 2083
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:22:19 +0530] "GET /Univ5/Home.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:22:19 +0530] "GET /Univ5/Login.jsp HTTP/1.1" 200 2005
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:22:34 +0530] "POST /Univ5/checkuser.jsp HTTP/1.1" 200 947
+0:0:0:0:0:0:0:1 - - [04/Jun/2025:11:22:42 +0530] "GET /Univ5/ListOfProduct.jsp HTTP/1.1" 200 2492

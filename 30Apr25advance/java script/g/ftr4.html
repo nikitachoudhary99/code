@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>IfDemo</title>
+<script>
+function add(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a+b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value = c;
+}
+function sub(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a-b;
+//document.write("Diff = "+c);
+document.getElementById("t3").value = c;
+}
+function multi(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a*b;
+//document.write("Product = "+c);
+document.getElementById("t3").value = c;
+}
+function div(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a/b;
+//document.write("Quotient = "+c);
+document.getElementById("t3").value = c;
+}
+</script>
+</head>
+<body>
+<center>
+<h1> Universal Informatics</h1>
+<br><br><br>
+<hr>
+<br><br><br>
+Number1<input type="text" id="t1"><br><br>
+Number2<input type="text" id="t2"><br><br>
+Result<input type="text" id="t3"><br><br>
+<input type="button" value="Add" onclick="add(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="button" value="Sub" onclick="sub(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="button" value="Multi" onclick="multi(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="button" value="Div" onclick="div(document.getElementById('t1').value,document.getElementById('t2').value)">
+<br><br><br><br><br>
+<hr>
+<br>
+<br>
+<address>
+Race Course Road<br>
+Abhay Prashal Campus<br>
+Indore,M.P.(452001)
+</address>
+</center>
+</body>
+</html>
+
+

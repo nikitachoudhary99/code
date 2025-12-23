@@ -1,0 +1,17 @@
+body{
+    background-color: azure;
+}
+h1{
+    background-color: blueviolet;
+    border: 2px;
+    border-style: double;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+}
+p{
+    text-align: center;
+    border-color: black;
+    background-color: aqua;
+    font-size: 20px;
+}

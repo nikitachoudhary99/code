@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Loop Demo</title>
+<script>
+function count()
+{
+var m = parseInt(document.getElementById("t1").value);
+var n = parseInt(document.getElementById("t2").value);
+var i=m;
+while(i<=n)
+{
+document.write("i = "+i+"<br>");
+i++;
+}
+var i=m;
+while(i>=n)
+{
+document.write("i = "+i+"<br>");
+i--;
+}
+
+}
+</script>
+</head>
+<body>
+<center>
+Enter start value:<input type="text" id="t1"><br><br>
+Enter stop value:<input type="text" id="t2"><br><br>
+<input type="button" onclick="count()" value="counting">
+</center>
+</body>
+</html>

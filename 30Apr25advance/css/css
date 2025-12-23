@@ -1,0 +1,640 @@
+What is CSS?
+    • CSS stands for Cascading Style Sheets
+    • CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+    • CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    • External stylesheets are stored in CSS files
+Why Use CSS?
+CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes. 
+CSS Solved a Big Problem
+HTML was NEVER intended to contain tags for formatting a web page!
+HTML was created to describe the content of a web page, like:
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+CSS Syntax
+A CSS rule-set consists of a selector and a declaration block:
+
+The selector points to the HTML element you want to style.
+The declaration block contains one or more declarations separated by semicolons.
+Each declaration includes a CSS property name and a value, separated by a colon.
+A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.
+In the following example all <p> elements will be center-aligned, with a red text color:
+p {
+ color: red;
+  text-align: center;
+}
+CSS Selectors
+CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.
+
+The element Selector
+The element selector selects elements based on the element name.
+You can select all <p> elements on a page like this (in this case, all <p> elements will be center-aligned, with a red text color):
+Example
+p {
+ color: red;
+  text-align: center;
+}
+The id Selector
+The id selector uses the id attribute of an HTML element to select a specific element.
+The id of an element should be unique within a page, so the id selector is used to select one unique element!
+To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+The style rule below will be applied to the HTML element with id="para1":
+#para1 {
+   text-align: center;
+   color: red;
+}
+
+
+
+The class Selector
+The class selector selects elements with a specific class attribute.
+To select elements with a specific class, write a period (.) character, followed by the name of the class.
+In the example below, all HTML elements with class="center" will be red and center-aligned:
+Example
+.center {
+   text-align: center;
+   color: red;
+}
+
+You can also specify that only specific HTML elements should be affected by a class.
+In the example below, only <p> elements with class="center" will be center-aligned:
+Example
+p.center {
+   text-align: center;
+   color: red;
+}
+HTML elements can also refer to more than one class.
+In the example below, the <p> element will be styled according to class="center" and to class="large":
+Example
+<p class="center large">This paragraph refers to two classes.</p>
+
+Grouping Selectors
+If you have elements with the same style definitions, like this:
+h1 {
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: red;
+}
+
+p {
+    text-align: center;
+    color: red;
+}
+
+It will be better to group the selectors, to minimize the code.
+To group selectors, separate each selector with a comma.
+In the example below we have grouped the selectors from the code above:
+Example
+h1,h2,p {
+   text-align: center;
+   color: red;
+}
+
+CSS Comments
+Comments are used to explain the code, and may help when you edit the source code at a later date.
+Comments are ignored by browsers.
+A CSS comment starts with /* and ends with */. Comments can also span multiple lines:
+Example
+p {
+ color: red;
+    /*This is a single-line comment */
+   text-align: center;
+}
+
+/*Thisis amulti-line
+comment 
+*/
+
+
+
+
+
+
+CSS How To...
+When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.
+
+Three Ways to Insert CSS
+There are three ways of inserting a style sheet:
+    • External style sheet
+    • Internal style sheet
+    • Inline style
+
+External Style Sheet:
+
+With an external style sheet, you can change the look of an entire website by changing just one file!
+Each page must include a reference to the external style sheet file inside the <link> element. The <link> element goes inside the <head> section:
+Example
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+An external style sheet can be written in any text editor. The file should not contain any html tags. The style sheet file must be saved with a .css extension.
+Here is how the "mystyle.css" looks:
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is: margin-left: 20px;
+Internal Style Sheet
+An internal style sheet may be used if one single page has a unique style.
+Internal styles are defined within the <style> element, inside the <head> section of an HTML page:
+Example
+<head>
+<style>
+body {
+   background-color: linen;
+}
+
+h1 {
+   color: maroon;
+   margin-left: 40px;
+} 
+</style>
+</head>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: linen;
+}
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+Inline Styles
+An inline style may be used to apply a unique style for a single element.
+To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.
+The example below shows how to change the color and the left margin of a <h1> element:
+Example
+<h1 style="color:blue;margin-left:30px;">This is a heading</h1>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:blue;margin-left:30px;">This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+CSS Colors
+Colors in CSS are most often specified by:
+    • a valid color name - like "red"
+    • an RGB value - like "rgb(255, 0, 0)"
+    • a HEX value - like "#ff0000"
+Color Names
+Colors set by using color names:
+Example
+Color
+Name
+ 
+Red
+ 
+Green
+ 
+Blue
+ 
+Orange
+ 
+Yellow
+ 
+Cyan
+ 
+Black
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Color Names Examples</h2>
+<p>Note: You will learn more about the background-color and the color property later in our tutorial.</p>
+
+<h2 style="background-color:red">
+Red background-color
+</h2>
+
+<h2 style="background-color:green">
+Green background-color
+</h2>
+
+<h2 style="background-color:blue;color:white">
+Blue background-color and white text color
+</h2>
+
+<h2 style="background-color:orange">
+Orange background-color
+</h2>
+
+<h2 style="background-color:yellow">
+Yellow background-color
+</h2>
+
+<h2 style="background-color:cyan">
+Cyan background-color
+</h2>
+
+<h2 style="background-color:black;color:white">
+Black background-color and white text color
+</h2>
+
+</body>
+</html>
+
+Note: Color names are not case-sensitive: "Red" is the same as "red" or "RED".
+RGB (Red, Green, Blue)
+RGB color values can be specified using this formula: rgb(red, green, blue).
+Each parameter (red, green, blue) defines the intensity of the color between 0 and 255.
+For example, rgb(255,0,0) is displayed as red, because red is set to its highest value (255) and the others are set to 0. 
+Example
+Color
+RGB
+ 
+rgb(255,0,0)
+ 
+rgb(0,255,0)
+ 
+rgb(0,0,255)
+ 
+rgb(255,165,0)
+ 
+rgb(255,255,0)
+ 
+rgb(0,255,255)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>RGB Color Examples</h2>
+
+<h2 style="background-color:rgb(255, 0, 0)">
+Background-color set by using rgb(255, 0, 0)
+</h2>
+
+<h2 style="background-color:rgb(0, 255, 0)">
+Background-color set by using rgb(0, 255, 0)
+</h2>
+
+<h2 style="background-color:rgb(0, 0, 255)">
+Background-color set by using rgb(0, 0, 255)
+</h2>
+
+<h2 style="background-color:rgb(255, 165, 0)">
+Background-color set by using rgb(255, 165, 0)
+</h2>
+
+<h2 style="background-color:rgb(255, 255, 0)">
+Background-color set by using rgb(255, 255, 0)
+</h2>
+
+<h2 style="background-color:rgb(0, 255, 255)">
+Background-color set by using rgb(0, 255, 255)
+</h2>
+
+</body>
+</html>
+
+Hexadecimal Colors
+RGB values can also be specified using hexadecimal color values in the form: #RRGGBB, where RR (red), GG (green) and BB (blue) are hexadecimal values between 00 and FF (same as decimal 0-255).
+For example, #FF0000 is displayed as red, because red is set to its highest value (FF) and the others are set to the lowest value (00). Note: HEX values are case-insensitive: "#ff0000" is the same as "FF0000".
+Example
+Color
+HEX
+ 
+#FF0000
+ 
+#00FF00
+ 
+#0000FF
+ 
+#FFA500
+ 
+#FFFF00
+ 
+#00FFFF
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HEX Color Examples</h2>
+
+<h2 style="background-color:#FF0000">
+Background-color set by using #FF0000
+</h2>
+
+<h2 style="background-color:#00FF00">
+Background-color set by using #00FF00
+</h2>
+
+<h2 style="background-color:#0000FF">
+Background-color set by using #0000FF
+</h2>
+
+<h2 style="background-color:#FFA500">
+Background-color set by using #FFA500
+</h2>
+
+<h2 style="background-color:#FFFF00">
+Background-color set by using #FFFF00
+</h2>
+
+<h2 style="background-color:#00FFFF">
+Background-color set by using #00FFFF
+</h2>
+
+</body>
+</html>
+
+CSS Backgrounds
+he CSS background properties are used to define the background effects for elements.
+CSS background properties:
+    • background-color
+    • background-image
+    • background-repeat
+    • background-attachment
+    • background-position
+Background Color
+The background-color property specifies the background color of an element.
+The background color of a page is set like this:
+Example
+body {
+   background-color: lightblue;
+}
+With CSS, a color is most often specified by:
+    • a valid color name - like "red"
+    • a HEX value - like "#ff0000"
+    • an RGB value - like "rgb(255,0,0)"
+Look at CSS Color Values for a complete list of possible color values.
+In the example below, the <h1>, <p>, and <div> elements have different background colors:
+Example
+h1 {
+   background-color: green;
+}
+
+div {
+   background-color: lightblue;
+}
+
+p {
+   background-color: yellow;
+}
+Background Image
+The background-image property specifies an image to use as the background of an element.
+By default, the image is repeated so it covers the entire element.
+The background image for a page can be set like this:
+Example
+body {
+   background-image: url("paper.gif");
+}
+Background Image - Repeat Horizontally or Vertically
+By default, the background-image property repeats an image both horizontally and vertically.
+Some images should be repeated only horizontally or vertically, or they will look strange, like this:
+Example
+body {
+   background-image: url("gradient_bg.png");
+}
+If the image above is repeated only horizontally (background-repeat: repeat-x;), the background will look better:
+Example
+body {
+   background-image: url("gradient_bg.png");
+   background-repeat: repeat-y;
+}
+Background Image - Set position and no-repeat
+Showing the background image only once is also specified by the background-repeat property:
+Example
+body {
+   background-image: url("img_tree.png");
+   background-repeat: no-repeat;
+}
+Background Image - Fixed position
+To specify that the background image should be fixed (will not scroll with the rest of the page), use the background-attachment property:
+Example
+body {
+   background-image: url("img_tree.png");
+   background-repeat: no-repeat;
+   background-position: right top;
+   background-attachment: fixed;
+}
+Background - Shorthand property
+To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+The shorthand property for background is background:
+Example
+body {
+   background: #ffffff url("img_tree.png") no-repeat right top;
+}
+When using the shorthand property the order of the property values is:
+    • background-color
+    • background-image
+    • background-repeat
+    • background-attachment
+    • background-position
+It does not matter if one of the property values is missing, as long as the other ones are in this order.
+CSS Border Properties
+The CSS border properties allow you to specify the style, width, and color of an element's border.
+I have borders on all sides.
+
+I have a red bottom border
+
+I have rounded borders.
+
+I have a blue left border.
+
+Border Style
+The border-style property specifies what kind of border to display.
+The following values are allowed:
+    • dotted - Defines a dotted border
+    • dashed - Defines a dashed border
+    • solid - Defines a solid border
+    • double - Defines a double border
+    • groove - Defines a 3D grooved border. The effect depends on the border-color value
+    • ridge - Defines a 3D ridged border. The effect depends on the border-color value
+    • inset - Defines a 3D inset border. The effect depends on the border-color value
+    • outset - Defines a 3D outset border. The effect depends on the border-color value
+    • none - Defines no border
+    • hidden - Defines a hidden border
+The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
+Example
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+Result:
+A dotted border.
+A dashed border.
+A solid border.
+A double border.
+A groove border. The effect depends on the border-color value.
+A ridge border. The effect depends on the border-color value.
+An inset border. The effect depends on the border-color value.
+An outset border. The effect depends on the border-color value.
+No border.
+A hidden border.
+A mixed border.
+Border Width
+The border-width property specifies the width of the four borders.
+The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.
+The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).
+5px border-width
+Example
+p.one {
+   border-style: solid;
+   border-width: 5px;
+}
+
+p.two {
+   border-style: solid;
+   border-width: medium;
+}
+
+p.three {
+   border-style: solid;
+   border-width: 2px 10px 4px 20px;
+}
+Border Color
+The border-color property is used to set the color of the four borders.
+The color can be set by:
+    • name - specify a color name, like "red"
+    • Hex - specify a hex value, like "#ff0000"
+    • RGB - specify a RGB value, like "rgb(255,0,0)"
+    • transparent
+The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border). 
+If border-color is not set, it inherits the color of the element.
+Red border
+Example
+p.one {
+   border-style: solid;
+   border-color: red;
+}
+
+p.two {
+   border-style: solid;
+   border-color: green;
+}
+
+p.three {
+   border-style: solid;
+   border-color: red green blue yellow;
+}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.one {
+    border-style: solid;
+    border-color: red;
+}
+
+p.two {
+    border-style: solid;
+    border-color: green;
+} 
+
+p.three {
+    border-style: solid;
+    border-color: red green blue yellow;
+} 
+</style>
+</head>
+<body>
+
+<h2>The border-color Property</h2>
+<p>This property specifies the color of the four borders:</p>
+
+<p class="one">A solid red border</p>
+<p class="two">A solid green border</p>
+<p class="three">A solid multicolor border</p>
+<p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property to set the borders first.</p>
+
+</body>
+</html>
+Border - Individual Sides
+From the examples above you have seen that it is possible to specify a different border for each side.
+In CSS, there is also properties for specifying each of the borders (top, right, bottom, and left):
+Different Border Styles
+Example
+p {
+   border-top-style: dotted;
+   border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+So, here is how it works:
+If the border-style property has four values:
+    • border-style: dotted solid double dashed;
+        ◦ top border is dotted
+        ◦ right border is solid
+        ◦ bottom border is double
+        ◦ left border is dashed
+If the border-style property has three values:
+    • border-style: dotted solid double;
+        ◦ top border is dotted
+        ◦ right and left borders are solid
+        ◦ bottom border is double
+If the border-style property has two values:
+    • border-style: dotted solid;
+        ◦ top and bottom borders are dotted
+        ◦ right and left borders are solid
+If the border-style property has one value:
+    • border-style: dotted;
+        ◦ all four borders are dotted
+The border-style property is used in the example above. However, it also works with border-width and border-color.
+
+Border - Shorthand Property
+As you can see from the examples above, there are many properties to consider when dealing with borders.
+To shorten the code, it is also possible to specify all the individual border properties in one property.
+The border property is a shorthand property for the following individual border properties:
+    • border-width
+    • border-style (required)
+    • border-color
+Example
+p {
+   border: 5px solid red;
+}
+Result:
+Some text
+
+
+
+
+FONT:
+
+This chapter teaches you how to set fonts of a content, available in an HTML element. You can set following font properties of an element −
+
+The font-family property is used to change the face of a font.
+
+The font-style property is used to make a font italic or oblique.
+
+The font-variant property is used to create a small-caps effect.
+
+The font-weight property is used to increase or decrease how bold or light a font appears.
+
+The font-size property is used to increase or decrease the size of a font.
+
+The font property is used as shorthand to specify a number of other font properties.

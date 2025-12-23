@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Loop Demo</title>
+<script>
+function count()
+{
+var n = parseInt(document.getElementById("t1").value);
+var i=1;
+while(i<=n)
+{
+document.write("i = "+i+"<br>");
+i++;
+}
+}
+</script>
+</head>
+<body>
+<center>
+Enter a value:<input type="text" id="t1"><br><br>
+<input type="button" onclick="count()" value="counting">
+</center>
+</body>
+</html>

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\BETU\Desktop\coading\25june25jee\25june25jee\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1614096299.index
+1105568224.index
+3379031492.index
+3283621798.index
+1848253063.index
+4134507049.index

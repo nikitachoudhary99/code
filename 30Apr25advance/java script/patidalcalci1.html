@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>calculator</title>
+
+</head>
+<body>
+<script>
+function add(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a+b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+function sub(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a-b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+function multi(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a*b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+function div(x,y)
+{
+var a = parseInt(x);
+var b = parseInt(y);
+var c = a/b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value=c;
+}
+</script>
+<center>
+<h1>Universal Calci</h1>
+<br><br>
+<hr>
+Number1<input type="text" id="t1"><br><br>
+Number2<input type="text" id="t2"><br><br>
+Result<input type="text" id="t3"><br><br>
+<input type="submit" value="Add" onclick="add(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="submit" value="Sub" onclick="sub(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="submit" value="Multi" onclick="multi(document.getElementById('t1').value,document.getElementById('t2').value)">
+<input type="submit" value="Div" onclick="div(document.getElementById('t1').value,document.getElementById('t2').value)">
+<br><br><br>
+<hr>
+</center>
+</body>
+</html>
+

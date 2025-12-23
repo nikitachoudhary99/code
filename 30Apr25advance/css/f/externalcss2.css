@@ -1,0 +1,19 @@
+body{
+    background-color: hwb(146 3% 64% / 0.249);
+}
+#head1{
+    background-color: chocolate;
+    color: blue;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 75px;
+}
+#para1{
+    background-color: aqua;
+    color: blue;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+}

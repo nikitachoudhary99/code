@@ -1,0 +1,40 @@
+<ol>  Ordered List
+<ul>  Unordered Lst
+	<li>  List Items
+	
+	
+Input Tags:
+<input type="">
+type:value
+text
+password
+date
+datetime
+radio
+checkbox
+submit
+button
+reset
+file
+email
+week
+time
+
+
+
+OL : Ordered List
+
+UL : Unordered List
+
+LI : List Item
+
+
+<table>
+<tr> Table Row
+<th> Heading Col
+<td> Data Col
+
+
+
+
+
