@@ -1,0 +1,26 @@
+package com.nc.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nc.daoimpl.EmployeeDaoImpl;
+import com.nc.pojo.Employee;
+
+@RestController
+public class EmployeeController {
+	@Autowired
+	private EmployeeDaoImpl daoimpl;
+	
+	/*
+	 * localhost:8000/getAll
+	 * {"empId":104,"empName":"Seeta Ram Ji","salary":53000.0}
+	 */
+	@GetMapping("/getAll")
+	public List<Employee> getAllEmp(){
+		List<Employee> lst=daoimpl.getAllEmployee();
+		return lst;
+	}
+}

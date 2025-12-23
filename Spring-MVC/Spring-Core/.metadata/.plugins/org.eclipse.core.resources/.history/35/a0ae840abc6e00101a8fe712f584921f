@@ -1,0 +1,27 @@
+package com.univ;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.ProductDaoImpl;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context= new ClassPathXmlApplicationContext("spring.cfg.xml");
+        ProductDaoImpl daoimpl=context.getBean("daoimpl",ProductDaoImpl.class);
+        if(daoimpl.addProduct(pd))
+        {
+        System.out.println("Product successfully added");	
+        }
+        else
+        {
+        	System.out.println("Product not added");
+        }
+    }
+}

@@ -1,0 +1,80 @@
+package com.univ.daoimpl;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.univ.dao.ProductDao;
+import com.univ.pojo.Product;
+
+public class ProductDaoImpl implements ProductDao{
+	private JdbcTemplate jTemplate;
+
+	public void setjTemplate(JdbcTemplate jTemplate) {
+		this.jTemplate = jTemplate;
+	}
+
+	@Override
+	public boolean addProduct(Product pd) {
+		
+		try {
+			int count=jTemplate.update("insert into Product values(?,?,?)",
+					new Object[] {pd.getpId(),pd.getpName(),pd.getPrice()});
+			if(count>0)
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+			
+		}
+	}
+
+	@Override
+	public boolean updateProduct(Product pd) {
+
+		try {
+			int count=jTemplate.update("update Product set pName=?,Price=? where pId=?",
+					new Object[] {pd.getpName(),pd.getPrice(),pd.getpId()});
+			if(count>0)
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+			
+		}
+	}
+
+	@Override
+	public boolean deleteProduct(Product pd) {
+		try {
+			int count=jTemplate.update("delete Product  where pId=?",
+					new Object[] {pd.getpId()});
+			if(count>0)
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+			
+		}
+	}
+
+	@Override
+	public Product searchProduct(int pId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

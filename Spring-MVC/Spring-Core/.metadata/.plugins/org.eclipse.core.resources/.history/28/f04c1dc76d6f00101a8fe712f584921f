@@ -1,0 +1,117 @@
+package com.univ.daoimpl;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.univ.dao.StudentDao;
+import com.univ.pojo.Student;
+
+public class StudentDaoImpl implements StudentDao{
+ private JdbcTemplate JTemplate;
+ 
+	public void setJTemplate(JdbcTemplate jTemplate) {
+	JTemplate = jTemplate;
+}
+
+	@Override
+	public boolean addStudent(Student std) {
+		try {
+			int count=JTemplate.update("insert into Student values(?,?,?)",
+				new Object[] {std.getRoll(),std.getName(),std.getSub()});
+			
+			if(count>0)
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean updateStudent(Student std) {
+		try {
+			int count=JTemplate.update("update  Student setname=?,sub=? where roll=?",
+				
+				new Object[] {std.getName(),std.getSub(),std.getRoll()});
+			
+			if(count>0)
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+		}	}
+
+	@Override
+	public boolean deleteStudent(Student std) {
+		try {
+			int count=JTemplate.update("delete from Student where roll=?",
+				
+				new Object[] {std.getRoll()});
+			
+			if(count>0)
+				return true;
+			else
+				return false;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+		}	}	
+//
+//	@Override
+//	public Student searchStudent(int roll) {
+//		try {
+//			List<Student>lst=JTemplate.query("select * from Student where roll=?"
+//					,new BeanPropertyRowMapper<Student>(Student.class),roll);
+//			
+//			if(lst.size()>0)
+//				return true;
+//			else
+//				return false;
+//		} catch (Exception e) {
+//			e.getStackTrace();
+//			return false;
+//		}	
+//		}
+//			
+
+	@Override
+	public Student searchStudent(int roll) {
+	    try {
+	        Student student = JTemplate.queryForObject(
+	            "SELECT * FROM Student WHERE roll = ?",
+	            new BeanPropertyRowMapper<>(Student.class),
+	            roll
+	        );
+	        return student;
+	    
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return null;
+	    }
+	}
+
+	
+	
+	
+	@Override
+	public List<Student> getallStudents(int roll) {
+		try {
+			List<Student>lst;
+			lst=JTemplate.query("select * from Student",new BeanPropertyRowMapper<Student>(Student.class));
+			
+			if(lst.size()>0)
+				return lst;
+			else
+				return null;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return null;
+		}		
+	}
+}

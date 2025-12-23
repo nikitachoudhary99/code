@@ -1,0 +1,48 @@
+package com.univ.dao;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import com.univ.entities.Employee;
+
+public class EmployeeDao {
+
+	private HibernateTemplate hibernateTemplate;
+
+	// Setter Injection
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+
+	// Insert Product
+	@Transactional
+	public int insert(Employee product) {
+		Integer i = (Integer) hibernateTemplate.save(product);
+		return i;
+	}
+
+	// ✅ Corrected: Get single product
+	public Employee getProduct(int productId) {
+		return this.hibernateTemplate.get(Employee.class, productId);
+	}
+
+	// Get All Products
+	public List<Employee> getAllProducts() {
+		return this.hibernateTemplate.loadAll(Employee.class);
+	}
+
+	// Delete Product
+	@Transactional
+	public void deleteProduct(int productId) {
+		Employee product = this.hibernateTemplate.get(Employee.class, productId);
+		this.hibernateTemplate.delete(product);
+	}
+
+	// Update Product
+	@Transactional
+	public void updateProduct(Employee product) {
+		this.hibernateTemplate.update(product);
+	}
+}

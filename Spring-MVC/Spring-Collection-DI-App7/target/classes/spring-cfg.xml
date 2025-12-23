@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean class="com.univ.bean.Bag" name="balls">
+        	<property name="balls">
+        		<list>
+        			<value>Red</value>
+        			<value>Green</value>
+        			<value>Blue</value>
+        			<value>White</value>
+        		</list>
+        	</property>
+        </bean>
+        
+        <bean class="com.univ.bean.Product" name="pdr">
+        	<property name="pdr">
+        		<set>
+        			<value>Keyboard</value>
+        			<value>Mouse</value>
+        			<value>Mic</value>
+        			<value>Printer</value>
+        		</set>
+        	</property>
+        </bean>
+        
+        <bean class="com.univ.bean.Interviews" name="schedule">
+        	<property name="schedule">
+        		<map>
+        		<entry key="TCS" value="15-Aug-25"/>
+        		
+        		<entry key="Wipro" value="10-Agu-25"/>
+        		<entry key="Accenture" value="1-Agu-25"/>
+        		</map>
+        	</property>
+        </bean>
+        <bean class="com.univ.bean.DBConnection" name="dbprop">
+        	<property name="dbprop">
+        		<props>
+        			<prop key="driverClassName">com.mysql.cj.jdbc.Driver</prop>
+        			<prop key="url">jdbc:mysql://localhost:3306/dbname</prop>
+        			<prop key="username">root</prop>
+        			<prop key="password">root</prop>
+        		</props>
+        	</property>
+        </bean>
+        
+</beans>

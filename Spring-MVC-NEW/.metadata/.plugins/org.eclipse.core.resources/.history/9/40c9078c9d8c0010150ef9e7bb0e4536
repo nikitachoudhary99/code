@@ -1,0 +1,87 @@
+package com.nc.daoimpl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.nc.SpringBootHiberApp3Application;
+import com.nc.dao.EmployeeDao;
+import com.nc.pojo.Employee;
+import com.nc.repository.EmployeeRepository;
+
+@Repository
+public class EmployeeDaoImpl implements EmployeeDao{
+	private final SpringBootHiberApp3Application app3Application;
+	
+	@Autowired
+	private EmployeeRepository eRepo;
+	
+	public EmployeeDaoImpl(SpringBootHiberApp3Application app3Application) {
+		this.app3Application=app3Application;
+	}
+
+	@Override
+	public boolean addEmployee(Employee e) {
+		try {
+			eRepo.save(e);
+			return true;
+		} catch (Exception e2) {
+			e2.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean updateEmployee(Employee e) {
+		try {
+			Optional<Employee> op=eRepo.findById(e.getEmpId());
+			if(op.isPresent()) {
+				eRepo.save(e);
+				return true;
+			}else {
+				return false;
+			}
+		} catch (Exception e2) {
+			e2.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean deleteEmployee(int empId) {
+		try {
+			Optional<Employee> op=eRepo.findById(empId);
+			if(op.isPresent()) {
+				eRepo.deleteById(empId);
+				return true;
+			}else {
+				return false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public Employee getEmployee(int empId) {
+		try {
+			Optional<Employee> op=eRepo.findById(empId);
+			if(op.isPresent()) {
+				return op.get();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

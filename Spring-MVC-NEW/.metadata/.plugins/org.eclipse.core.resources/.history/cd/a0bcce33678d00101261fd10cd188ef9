@@ -1,0 +1,19 @@
+package com.nc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.nc.daoimpl.StudentDaoImpl;
+
+@Controller
+public class StudentController {
+	@Autowired
+	private StudentDaoImpl daoimpl;
+	
+	@GetMapping("/")
+	public String mainPage() {
+		return "index";
+	}
+	
+}

@@ -1,0 +1,11 @@
+package com.nc.daoimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nc.repository.EmployeeRepository;
+
+public class EmployeeDaoImpl {
+	@Autowired
+	private EmployeeRepository eRepo;
+	
+}

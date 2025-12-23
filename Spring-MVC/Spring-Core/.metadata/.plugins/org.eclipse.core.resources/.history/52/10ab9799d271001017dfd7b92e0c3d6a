@@ -1,0 +1,27 @@
+package com.univ.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "productdetails")
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO) 
+	@Column(name = "productId")
+	private int pid;
+	
+	@Column(name = "productName")
+	private String pName;
+	
+	@Column(name = "productPrice")
+	private String Price;
+
+		
+	
+}

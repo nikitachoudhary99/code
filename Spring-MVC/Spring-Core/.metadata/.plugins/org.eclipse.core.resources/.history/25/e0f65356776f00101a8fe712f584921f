@@ -1,0 +1,53 @@
+86% of storage used … If you run out of space, you can't save to Drive or back up Google Photos. Get 30 GB of storage for ₹59.00 ₹15.00/month for 3 months.
+package com.univ;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.config.SpringConfig;
+import com.univ.daoimpl.EmployeeDaoImpl;
+import com.univ.pojo.Employee;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        
+    	ApplicationContext context = 
+    			new AnnotationConfigApplicationContext(SpringConfig.class);
+    	
+    	Employee emp = new Employee(111,"Seeta Ram Bhiya Ji" , 33000);
+    	
+    	EmployeeDaoImpl daoimpl = context.getBean(EmployeeDaoImpl.class);
+    	
+    	if(daoimpl.addEmployee(emp))
+    		System.out.println("Employee Added Successfylly");
+    	else
+    		System.out.println("Employee Could Not Be Added");
+//    	Employee emp = new Employee(104,"Seeta Ram Ji" , 53000);
+//    	if(daoimpl.updateEmployee(emp))
+//    		System.out.println("Employee Updated Successfylly");
+//    	else
+//    		System.out.println("Employee Could Not Be Updated");
+//    	Employee emp = new Employee(104,"Seeta Ram Ji" , 53000);
+//    	if(daoimpl.deleteEmployee(emp))
+//    		System.out.println("Employee Deleted Successfylly");
+//    	else
+//    		System.out.println("Employee Could Not Be Deleted");
+    	
+//    	Employee emp = daoimpl.searchEmployee(101);
+//    	if(emp!=null)
+//    		System.out.println(emp);
+//    	else
+//    		System.out.println("Employee Not Found");
+    	
+    	List<Employee>lst = daoimpl.getAllEmployee();
+    	for (Employee employee : lst) {
+			System.out.println(employee);
+		}
+    	
+    }
+}

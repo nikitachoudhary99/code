@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\BETU\Desktop\coading\Spring-Core\Spring-Core-HibernateProduct\pom.xml"/>
+			<item value="C:\Users\BETU\Desktop\coading\Spring-Core\Spring-core-JDBC\src\main\java\com\univ\daoimpl\EmployeeDoaImpl.java"/>
+			<item value="C:\Users\BETU\Desktop\coading\Spring-Core\Spring-AutowireByConst\src\main\java\com\univ\bean\Container.java"/>
+			<item value="C:\Users\BETU\Desktop\coading\Spring-Core\Spring-core-cons-App2\src\main\java\com\univ\bean\Address.java"/>
+			<item value="C:\Users\BETU\Desktop\coading\Spring-Core\Spring-core-App1\src\main\java\com\univ\App.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.univ"/>
+			<item value="com.univ.Spring_jdbc_"/>
+		</list>
+		<list key="groupId">
+			<item value="com.univ"/>
+		</list>
+		<list key="artifactId">
+			<item value="Hibernate-Project"/>
+			<item value="Spring-Core-Hibernate-fruit"/>
+			<item value="Spring-Core-Hibernate"/>
+			<item value="Spring-Core-JDBC-WithoutXml2"/>
+			<item value="Spring-Core-jdbc-withoutxml"/>
+			<item value="Spring-Jdbc-WithOutXml"/>
+			<item value="Spring-jdbc-"/>
+			<item value="Spring-Jdbc-Product"/>
+			<item value="Spring-Jdbc-Student"/>
+			<item value="Spring-Jdbc"/>
+			<item value="Spring-core-JDBC"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

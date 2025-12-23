@@ -1,0 +1,87 @@
+package com.univ.daoimpl;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.univ.dao.StudentDao;
+import com.univ.pojo.Student;
+
+public class StudentDaoImpl implements StudentDao {
+
+    private JdbcTemplate jTemplate;
+
+    public void setJTemplate(JdbcTemplate jTemplate) {
+        this.jTemplate = jTemplate;
+    }
+
+    @Override
+    public boolean addStudent(Student std) {
+        try {
+            int count = jTemplate.update(
+                "INSERT INTO student (roll, name, sub) VALUES (?, ?, ?)",
+                std.getRoll(), std.getName(), std.getSub()
+            );
+            return count > 0;
+        } catch (Exception e) {
+            e.printStackTrace(); // 🔄 use printStackTrace to see real errors
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updateStudent(Student std) {
+        try {
+            int count = jTemplate.update(
+                "UPDATE student SET name = ?, sub = ? WHERE roll = ?",
+                std.getName(), std.getSub(), std.getRoll()
+            );
+            return count > 0;
+        } catch (Exception e) {
+            e.printStackTrace(); // ❗ don't ignore errors
+            return false;
+        }
+    }
+
+    @Override
+    public boolean deleteStudent(Student std) {
+        try {
+            int count = jTemplate.update(
+                "DELETE FROM student WHERE roll = ?",
+                std.getRoll()
+            );
+            return count > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public Student searchStudent(int roll) {
+        try {
+            return jTemplate.queryForObject(
+                "SELECT * FROM student WHERE roll = ?",
+                new BeanPropertyRowMapper<>(Student.class),
+                roll
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Student> getallStudents(int roll) { // 🚫 roll is unused
+        try {
+            return jTemplate.query(
+                "SELECT * FROM student",
+                new BeanPropertyRowMapper<>(Student.class)
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return List.of(); // return empty list instead of null
+        }
+    }
+}

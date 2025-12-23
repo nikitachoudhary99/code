@@ -1,0 +1,79 @@
+package com.univ;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.dao.StudentDao;
+import com.univ.dao.UniversalDao;
+import com.univ.pojo.Universal;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        System.out.println();
+		System.out.println("\t \t *********** Spring Core ORM Application Started Here....!!");
+
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("ormconfig.xml");
+
+		UniversalDao universalDao = context.getBean("universalDao", UniversalDao.class);
+
+		// Menu Driven Application
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		boolean flag = true;
+		while (flag)
+		{
+			System.out.println();
+			System.out.println("\t 1. Add New Student");
+			System.out.println("\t 2. Displaly All Student Details");
+			System.out.println("\t 3. Display Single Student Details");
+			System.out.println("\t 4. Delete Student");
+			System.out.println("\t 5. Update Student");
+			System.out.println("\t 6. Exit");
+			System.out.println();
+			Scanner sc = new Scanner(System.in);
+			try {
+				int choice=Integer.parseInt((br.readLine());
+				switch (choice) {
+				case 1:
+					//add new fname
+					Universal universal= new Universal();
+					
+					System.out.println("enter new Universal fName");
+					universal.setFName(sc.nextLine().trim());
+					System.out.println();
+					
+					//set new sname
+
+					
+					System.out.println("enter new Universal sName");
+					universal.setFName(sc.nextLine().trim().toUpperCase());
+					System.out.println();
+					
+					//Inserting universal object to database by calling insert metthod from UniversalDao
+					int row=UniversalDao.insert(universalDao);
+					System.out.println();
+					System.out.println("\\t \\t \\t Record Inserted : \" + row);"
+							+ "
+					
+					
+					break;
+
+				default:
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+    }
+}

@@ -1,0 +1,52 @@
+package com.univ;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.ProductDaoImpl;
+import com.univ.pojo.Product;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context= new ClassPathXmlApplicationContext("spring.cfg.xml");
+        ProductDaoImpl daoimpl=context.getBean("daoimpl",ProductDaoImpl.class);
+        
+//Product pd = new Product(104,"Seeta Ram" , 23000);
+    	
+    	ProductDaoImpl daoImpl2 = context.getBean("daoimpl",ProductDaoImpl.class);
+    	
+ 	if(daoimpl.addProduct(pd))
+    		System.out.println("Product Added Successfylly");
+    	else
+    		System.out.println("Product Could Not Be Added");
+    	Product pd = new Product(104,"Seeta Ram Ji" , 53000);
+    	if(daoimpl.updateProduct(pd))
+    		System.out.println("Product Updated Successfylly");
+    	else
+    		System.out.println("Product Could Not Be Updated");
+//    	Product pd = new Product(104,"Seeta Ram Ji" , 53000);
+//    	if(daoimpl.deleteProduct(pd))
+//    		System.out.println("Product Deleted Successfylly");
+//    	else
+//    		System.out.println("Product Could Not Be Deleted");
+    	
+//    	Product pd = daoimpl.searchProduct(101);
+//    	if(pd!=null)
+//    		System.out.println(pd);
+//    	else
+//    		System.out.println("Product Not Found");
+    	
+//    	List<Product>lst = daoimpl.getAllProducts();
+//    	for (Product product : lst) {
+//			System.out.println(product);
+//		}
+    }
+}

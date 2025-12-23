@@ -1,0 +1,58 @@
+package com.univ.dao;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import com.univ.entities.Product;
+
+
+public class ProductDao {
+
+	private HibernateTemplate hibernateTemplate;
+
+	// Save product Info
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+	@Transactional
+	public int insert(Product product) {
+		Integer i = (Integer) hibernateTemplate.save(product);
+		return i;
+	}
+
+	
+
+	// Get the Single product
+	public Product getStudent(int productId) {
+		return this.hibernateTemplate.get(Product.class, productId);
+	}
+
+	// Get All the product(All Rows)
+	public List<Product> getAllProducts() {
+		List<Product> products = this.hibernateTemplate.loadAll(Product.class);
+		return products;
+	}
+
+	// Delete the product data
+	@Transactional
+	public void deleteProduct(int productId) {
+		Product product = this.hibernateTemplate.get(Product.class, productId);
+		this.hibernateTemplate.delete(product);
+	}
+
+	// Update The Student Info
+	@Transactional
+	public void updateProduct(Product product) {
+		this.hibernateTemplate.update(product);
+	}
+
+	/*
+	 * public int countTotalRecords() { String countQry =
+	 * "SELECT COUNT(s.productId) FROM Productdetails s"; Long count = (Long)
+	 * hibernateTemplate.find(countQry).get(0); return count.intValue(); }
+	 */
+
+}

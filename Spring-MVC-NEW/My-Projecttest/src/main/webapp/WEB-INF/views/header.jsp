@@ -1,0 +1,37 @@
+<!-- header.html -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="cd-slider-nav">
+        <nav class="navbar navbar-expand-lg" id="tm-nav">
+          <a class="navbar-brand" href="#">Astro Motion</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbar-supported-content" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-supported-content">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item selected">
+                <a class="nav-link" aria-current="page" href="#0" data-no="1">Home</a>
+                <div class="circle"></div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#0" data-no="2">Gallery</a>
+                <div class="circle"></div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#0" data-no="3">About</a>
+                <div class="circle"></div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#0" data-no="4">Contact</a>
+                <div class="circle"></div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+package com.nc.controller;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nc.daoimpl.StudentDaoImpl;
+
+import com.nc.pojo.Student;
+
+@RestController
+
+public class StudentController {
+	@Autowired
+	private StudentDaoImpl impl;
+	
+	@GetMapping("/getAllStudent")
+	public List<Student> getAll(){
+		List<Student> lst= impl.getAllStudent();
+		return lst;
+	}
+	
+	
+	@PostMapping("/addNewStudent")
+	public HashMap<String, String> addStud(@RequestBody Student s){
+		HashMap<String, String> hm=new HashMap<String, String>();
+		 if (impl.addNewStudent(s))
+		{
+			hm.put("SUCCESS", "Student added successfully");
+			
+		}
+		else
+		{
+			hm.put("ERROR", "Student could not be added");
+		}
+		return hm;
+	}
+	@PutMapping("/updateStudent")
+	public HashMap<String, String> updateStud(@RequestBody Student s){
+		HashMap<String, String> hm=new HashMap<String, String>();
+		 if (impl.updateStudent(s))
+		{
+			hm.put("SUCCESS", "Student updated successfully");
+			
+		}
+		else
+		{
+			hm.put("ERROR", "Student could not be updated");
+		}
+		return hm;
+	}
+	@DeleteMapping("/deleteStudent")
+	public HashMap<String, String> deleteEmployee(@RequestParam ("Id")String sId){
+		HashMap<String, String> hm=new HashMap<String, String>();
+		int Id=Integer.parseInt(sId);
+		
+		if(impl.deleteStudent(Id))
+		{
+			hm.put("SUCCESS", "Student deleted successfully");	
+		}
+		else
+		{
+			hm.put("ERROR", "Student could not be deleted");
+		}
+		return hm;
+	}
+	@GetMapping("/searchStudent")
+	public Student getEmployee(@RequestParam("id")String sId) {
+		int id=Integer.parseInt(sId);
+		Student s=impl.searchStudent(id);
+		return s;
+	}
+	
+
+}

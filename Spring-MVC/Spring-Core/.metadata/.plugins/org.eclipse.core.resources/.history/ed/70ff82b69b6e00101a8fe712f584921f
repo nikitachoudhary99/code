@@ -1,0 +1,30 @@
+package com.univ;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.EmployeeDoaImpl;
+import com.univ.pojo.Employee;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        ApplicationContext context=new ClassPathXmlApplicationContext("spring.cfg.xml");
+        Employee e= new Employee(1001,"ram",12563.23);
+        EmployeeDoaImpl daoimpl=context.getBean("daoImpl",EmployeeDoaImpl.class);
+        if(daoimpl.addEmployee(e)) {
+        	System.out.println(e);
+        }
+        else
+        {
+        	System.out.println("Error ");
+        }
+        	
+    }
+}

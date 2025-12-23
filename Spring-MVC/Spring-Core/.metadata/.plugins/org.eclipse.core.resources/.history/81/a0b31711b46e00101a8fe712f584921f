@@ -1,0 +1,70 @@
+package com.univ;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.StudentDaoImpl;
+import com.univ.pojo.Student;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context=new ClassPathXmlApplicationContext("spring.cfg.xml");
+        StudentDaoImpl daoimpl=context.getBean("daoimpl",StudentDaoImpl.class);
+        Student std=new Student(1001,"ram","Java");
+        Student std1=new Student(1002,"ramja","Java");
+        Student std2=new Student(1003,"raj","Java");
+        Student std3=new Student(1004,"rag","Java");
+        Student std4=new Student(1005,"raka","Java");
+        Student std5=new Student(1006,"ramsha","Java");
+
+//        if(daoimpl.addStudent(std))
+//        {
+//        	System.out.println("Student successfully Added");
+//        }
+//        else
+//        {
+//        	System.out.println("Student successfully not Added");
+//        }
+//        if(daoimpl.updateStudent(std))
+//        {
+//        	System.out.println("Student successfully updated");
+//            Student std1=new Student(1002,"ram","python");
+//        }
+//        else
+//        {
+//        	System.out.println("Student successfully not updated");
+//        	
+//        }
+//        if(daoimpl.deleteStudent(std))
+//        {
+//        	System.out.println("Student successfully deleted");
+//        	Student std1=new Student(1002,"ram","python");
+//        	
+//        }
+//        else
+//        {
+//        	System.out.println("Student successfully not deleted");
+//        	
+//        }
+//        
+//        Student stdd = daoimpl.searchStudent(1002);
+//    	if(stdd!=null)
+//    		System.out.println(stdd);
+//    	else
+//    		System.out.println("Student Not Found");
+//    	
+    	
+    	List<Student> students = daoimpl.getallStudents(1002);
+    	for (Student student : students) {
+			System.out.println(student);
+		}
+    }
+}

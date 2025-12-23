@@ -1,0 +1,14 @@
+package com.univ.dao;
+
+import java.util.List;
+
+import com.univ.pojo.Student;
+
+public interface StudentDao {
+	 boolean addStudent(Student stu);
+	 boolean updateStudent(Student stu);
+	 boolean deleteStudent(Student stu);
+	 Student searchStudent(int roll);
+	 List<Student> getAllStudent();
+	 
+}

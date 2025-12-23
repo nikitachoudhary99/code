@@ -1,0 +1,89 @@
+package com.nc.daoimpl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.nc.SpringBootHiberApp4Application;
+import com.nc.dao.StudentDao;
+import com.nc.pojo.Student;
+import com.nc.repository.StudentRepository;
+
+@Repository
+public class StudentDaoImpl implements StudentDao {
+	private final SpringBootHiberApp4Application app4Application;
+	
+	@Autowired
+	private StudentRepository srepo; 
+	
+
+	public StudentDaoImpl(SpringBootHiberApp4Application app4Application) {
+		this.app4Application=app4Application;
+	}
+
+	@Override
+	public boolean addNewStudent(Student s) {
+		try {
+			srepo.save(s);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean updateStudent(Student s) {
+		try {
+			Optional<Student> op= srepo.findById(s.getsId());
+			if(op.isPresent())
+			{
+				srepo.save(s);
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}	}
+
+	@Override
+	public boolean deleteStudent(int sId) {
+		try {
+			Optional<Student> op= srepo.findById(sId);
+			if(op.isPresent())
+			{
+				srepo.deleteById(s);
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}		}
+
+	@Override
+	public Student searchStudent(int sId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> getAllStudent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

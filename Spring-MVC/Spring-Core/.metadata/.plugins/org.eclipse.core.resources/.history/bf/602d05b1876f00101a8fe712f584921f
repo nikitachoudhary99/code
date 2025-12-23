@@ -1,0 +1,10 @@
+package com.univ.dao;
+
+import com.univ.pojo.Product;
+
+public interface ProductDao {
+	
+	boolean addProduct(Product pd);
+	boolean updateProduct(Product pd);
+	boolean deleteProduct(Product pd);
+}

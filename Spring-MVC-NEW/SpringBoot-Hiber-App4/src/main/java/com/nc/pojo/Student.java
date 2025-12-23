@@ -1,0 +1,45 @@
+package com.nc.pojo;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="student")
+public class Student {
+	@Id
+	private int sId;
+	private String name;
+	private double marks;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Student(int sId, String name, double marks) {
+		super();
+		this.sId = sId;
+		this.name = name;
+		this.marks = marks;
+	}
+	public int getsId() {
+		return sId;
+	}
+	public void setsId(int sId) {
+		this.sId = sId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getMarks() {
+		return marks;
+	}
+	public void setMarks(double marks) {
+		this.marks = marks;
+	}
+	
+	
+
+}

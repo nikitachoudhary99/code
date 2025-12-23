@@ -1,0 +1,5 @@
+package com.nc.repository;
+
+public interface EmployeeRepository {
+
+}

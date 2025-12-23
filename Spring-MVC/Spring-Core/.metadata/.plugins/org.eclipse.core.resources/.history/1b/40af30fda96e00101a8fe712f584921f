@@ -1,0 +1,53 @@
+package com.univ;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.EmployeeDoaImpl;
+import com.univ.pojo.Employee;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context = 
+    			new ClassPathXmlApplicationContext("spring-cfg.xml");
+    	
+	//Employee e = new Employee(104,"Seeta Ram" , 23000);
+    	
+    	EmployeeDoaImpl daoimpl = context.getBean("daoimpl",EmployeeDoaImpl.class);
+    	
+//    	if(daoimpl.addEmployee(e))
+//    		System.out.println("Employee Added Successfylly");
+//    	else
+//    		System.out.println("Employee Could Not Be Added");
+//    	Employee e = new Employee(104,"Seeta Ram Ji" , 53000);
+//    	if(daoimpl.updateEmployee(e))
+//    		System.out.println("Employee Updated Successfylly");
+//    	else
+//    		System.out.println("Employee Could Not Be Updated");
+//    	Employee e = new Employee(104,"Seeta Ram Ji" , 53000);
+//    	if(daoimpl.deleteEmployee(e))
+//    		System.out.println("Employee Deleted Successfylly");
+//    	else
+//    		System.out.println("Employee Could Not Be Deleted");
+    	
+//    	Employee e = daoimpl.searchEmployee(101);
+//    	if(e!=null)
+//    		System.out.println(e);
+//    	else
+//    		System.out.println("Employee Not Found");
+    	
+    	List<Employee>lst = daoimpl.getAllEmployee();
+    	for (Employee employee : lst) {
+			System.out.println(employee);
+		}
+    	
+    }
+    }

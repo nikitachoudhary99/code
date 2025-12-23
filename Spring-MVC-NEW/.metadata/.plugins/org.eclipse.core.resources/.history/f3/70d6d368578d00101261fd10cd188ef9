@@ -1,0 +1,33 @@
+package com.nc.controller;
+
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.nc.daoimpl.StudentDaoImpl;
+import com.nc.pojo.Student;
+
+@Controller
+public class StudentController {
+	@Autowired
+	private StudentDaoImpl impl;
+	
+	@PostMapping("/addNewStudent")
+	public HashMap<String, String> addStud(@RequestBody Student s){
+		HashMap<String, String> hm=new HashMap<String, String>();
+		 if (StudentDaoImpl.addNewStudent(s))
+		{
+			hm.put("SUCCESS", "Student added successfully");
+			
+		}
+		else
+		{
+			hm.put("ERROR", "Student could not be added");
+		}
+		return hm;
+	}
+
+}

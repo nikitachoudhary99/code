@@ -1,0 +1,16 @@
+package com.univ.controller;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+
+public class HomeControler {
+
+	public ModelAndView checkUserCridential(@RequestParam("username")String username
+			,@RequestParam("password")String password);
+	ModelAndView mv=null;
+	if(username.equals("abc@123")&&password.equals("abc123"))
+	{
+		mv=new ModelAndView("Home")
+	}
+	
+}

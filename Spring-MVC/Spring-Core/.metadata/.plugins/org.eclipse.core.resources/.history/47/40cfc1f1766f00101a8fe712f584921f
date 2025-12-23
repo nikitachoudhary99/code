@@ -1,0 +1,32 @@
+package com.univ.springcfg;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import com.univ.daoimpl.EmployeeDaoImpl;
+
+public class SpringConfig {
+	
+	public DriverManagerDataSource getdatasource()
+	{
+		DriverManagerDataSource ds=new DriverManagerDataSource();
+		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		ds.setUrl("jdbc:mysql://localhost:3306/25june25jeespring");
+		ds.setUsername("root");
+		ds.setPassword("mishthu99");
+		return ds;
+	}
+	
+	public JdbcTemplate getjTemplate()
+	{
+		JdbcTemplate jTemplate=new EmployeeDaoImpl();
+		daoimpl.setDataSource(getdatasource());
+		return jTemplate;
+	}
+	public EmployeeDaoImpl getEmployeeDaoImpl()
+	{
+		EmployeeDaoImpl daoimpl = new EmployeeDaoImpl();
+		daoimpl.setjTemplate(getJTemplate());
+		return daoimpl;
+	}
+}

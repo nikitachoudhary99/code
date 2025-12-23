@@ -1,0 +1,47 @@
+package com.nc.daoimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nc.dao.EmployeeDao;
+import com.nc.pojo.Employee;
+import com.nc.repository.EmployeeRepository;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+	private 
+	
+	@Autowired
+	private EmployeeRepository eRepo;
+
+	@Override
+	public boolean addEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Employee getEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

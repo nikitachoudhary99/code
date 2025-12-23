@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Corrected Address bean -->
+    <bean class="com.univ.bean.Address" name="add">
+        <property name="hNo">
+            <value>688</value>
+        </property>
+        <property name="street">
+            <value>holi tekri</value>
+        </property>
+        <property name="city">
+            <value>Indore</value>
+        </property>
+    </bean>
+
+    <!-- Employee bean with autowire -->
+    <bean class="com.univ.bean.Employee" name="emp" autowire="byType">
+        <constructor-arg value="101"/>
+        <constructor-arg value="radha"/>
+        <constructor-arg value="25300"/>
+    </bean>
+</beans>

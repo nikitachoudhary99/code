@@ -1,0 +1,23 @@
+INDEX VERSION 1.134
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3257012788.index
+\Spring-MVC-Hello\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1176395042.index
+\Spring-MVC-App2\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1536591172.index
+\Spring-MVC\src\main\java
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2459732733.index
+\Spring-MVC-App3\src\main\java
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1222670866.index
+\Spring-MVC-App2\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3250099809.index
+\Spring-MVC-App3\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3303079139.index
+\Spring-MVC\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\924261107.index
+\Spring-MVC-App2\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1406611835.index
+\Spring-Mvc-1\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2591454414.index
+\Spring-MVC-Hello\src\main\resources
+C:\Users\BETU\Desktop\coading\25june25jee\Spring-MVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1174901443.index
+\Spring-MVC-App3\src\main\java

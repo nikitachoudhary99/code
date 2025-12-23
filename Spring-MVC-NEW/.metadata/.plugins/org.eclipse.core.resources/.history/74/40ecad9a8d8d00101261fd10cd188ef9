@@ -1,0 +1,5 @@
+package com.nc.dao;
+
+public interface ProductDao {
+
+}

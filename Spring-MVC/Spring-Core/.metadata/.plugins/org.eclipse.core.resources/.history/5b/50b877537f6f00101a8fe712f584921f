@@ -1,0 +1,79 @@
+package com.univ;
+
+import java.util.List;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.StudentDaoImpl;
+import com.univ.pojo.Student;
+import com.univ.springcfg.SpringConfig;
+
+/**
+ * Hello world!
+ *
+ */
+
+public class App 
+ {   
+
+    public static void main( String[] args )
+    {
+        ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfig.class);
+       
+      //  Student std=new Student(1002,"ram ji","Java");
+      StudentDaoImpl daoimpl=context.getBean(StudentDaoImpl.class);      
+//        if(daoimpl.addStudent(std))
+//        {
+//        	System.out.println("Student successfully Added");
+//        }
+//        else
+//       {
+//        	System.out.println("Student not Added");
+//       }
+//        if(daoimpl.updateStudent(std))
+//        {
+//        	System.out.println("Student successfully updated");
+//            Student std1=new Student(1002,"ram","python");
+//        }
+//        else
+//        {
+//        	System.out.println("Student successfully not updated");
+//        	
+//        }
+//        if(daoimpl.deleteStudent(std))
+//        {
+//        	System.out.println("Student successfully deleted");
+//        	Student stu1=new Student(1002,"ram","python");
+//        	
+//        }
+//        else
+//        {
+//        	System.out.println("Student successfully not deleted");
+//        	
+//        }
+//        
+//        Student std = daoimpl.searchStudent(1002);
+//    	if(std!=null)
+//    		System.out.println(std);
+//    	else
+//    		System.out.println("Student Not Found");
+//    	
+    	
+//    	
+        List<Student> students = daoimpl.getallStudents(1001);
+
+        if (students == null || students.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            for (Student s : students) {
+                System.out.println(s);
+            }
+          }
+
+    }
+}

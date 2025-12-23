@@ -1,0 +1,5 @@
+package com.univ.entities;
+
+public class Fruit {
+
+}

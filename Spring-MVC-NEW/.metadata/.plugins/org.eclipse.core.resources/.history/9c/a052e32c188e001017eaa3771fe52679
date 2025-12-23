@@ -1,0 +1,86 @@
+package com.nc.daoimpl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.nc.SpringBootHiberApp6Application;
+import com.nc.dao.ProductDao;
+import com.nc.pojo.Product;
+import com.nc.repository.ProductRepository;
+
+@Repository
+public class ProductDaoImpl implements ProductDao {
+	
+	private final SpringBootHiberApp6Application app6Application;
+	@Autowired
+	private ProductRepository prepo;
+	
+	public ProductDaoImpl(SpringBootHiberApp6Application app6Application) {
+		super();
+		this.app6Application = app6Application;
+	}
+	
+	@Override
+	public boolean addProduct(Product p) {
+		try {
+			prepo.save(p);
+			return true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	@Override
+	public boolean updateProduct(Product p) {
+		try {
+			Optional<Product> op=prepo.findById(p.getpId());
+			if(op.isPresent()) {
+				prepo.save(p);
+				return true;
+			}else {
+				return false;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	@Override
+	public boolean deleteProduct(int pId) {
+		try {
+			Optional<Product> op=prepo.findById(pId);
+			if(op.isPresent())
+			{
+				prepo.deleteById(pId);
+				return true;
+			}else {
+				return false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	@Override
+	public Product getProduct(int pId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Product> getAllProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,44 @@
+package com.univ.pojo;
+
+public class Student {
+
+	private int roll;
+	private String name;
+	private String sub;
+		
+		public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+		
+		public Student(int roll, String name, String sub) {
+			super();
+			this.roll = roll;
+			this.name = name;
+			this.sub = sub;
+		}
+
+		public int getRoll() {
+			return roll;
+		}
+		public void setRoll(int roll) {
+			this.roll = roll;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getSub() {
+			return sub;
+		}
+		public void setSub(String sub) {
+			this.sub = sub;
+		}
+		@Override
+		public String toString() {
+			return "SpringConfig " + roll + "\t" + name + "" + sub;
+		}
+		
+}

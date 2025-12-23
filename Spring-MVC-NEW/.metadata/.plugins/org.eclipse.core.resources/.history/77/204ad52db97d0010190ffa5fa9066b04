@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Space Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#090a1a;        /* deep space */
+      --bg2:#0b1a3a;        /* nebula blue */
+      --accent:#03e9f4;     /* neon cyan */
+      --accent-2:#8a5cf6;   /* purple */
+      --glass:rgba(255,255,255,.08);
+      --text:#e7f3ff;
+      --muted:#9fb3c8;
+      --card-w: 360px;
+    }
+
+    /* ---------- GLOBAL ---------- */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 70% 10%, #1b2a68 0%, transparent 60%),
+                  radial-gradient(900px 700px at 20% 80%, #3a0a53 0%, transparent 55%),
+                  linear-gradient(135deg, var(--bg1), var(--bg2));
+      overflow:hidden;
+    }
+
+    /* perspective container for 3D tilt */
+    .scene{
+      position:relative;
+      height:100%;
+      display:grid;
+      place-items:center;
+      perspective:1000px;
+      isolation:isolate;
+    }
+
+    /* ---------- STARFIELD LAYERS ---------- */
+    .stars, .stars2, .stars3{
+      position:absolute; inset:0; pointer-events:none; z-index:-3;
+      background-repeat:repeat;
+      animation: drift 120s linear infinite;
+    }
+    .stars{background-image: radial-gradient(2px 2px at 20px 30px, #fff 50%, transparent 51%),
+                               radial-gradient(1.5px 1.5px at 130px 80px, #dff 50%, transparent 51%),
+                               radial-gradient(1.5px 1.5px at 300px 200px, #fff 50%, transparent 51%),
+                               radial-gradient(2px 2px at 500px 400px, #eef 50%, transparent 51%),
+                               radial-gradient(1.2px 1.2px at 800px 120px, #fff 50%, transparent 51%),
+                               radial-gradient(1.2px 1.2px at 1000px 600px, #dff 50%, transparent 51%);
+            background-size: 1000px 700px;
+    }
+    .stars2{z-index:-2; opacity:.6; filter:blur(.3px); animation-duration: 180s;
+      background-image: radial-gradient(1.6px 1.6px at 60px 120px, #fff 50%, transparent 51%),
+                        radial-gradient(1.6px 1.6px at 260px 420px, #cfe8ff 50%, transparent 51%),
+                        radial-gradient(1.4px 1.4px at 760px 220px, #fff 50%, transparent 51%),
+                        radial-gradient(1.6px 1.6px at 960px 520px, #f3f7ff 50%, transparent 51%);
+      background-size: 1200px 900px;
+    }
+    .stars3{z-index:-1; opacity:.35; filter:blur(1px); animation-duration: 240s;
+      background-image: radial-gradient(1.2px 1.2px at 160px 260px, #fff 50%, transparent 51%),
+                        radial-gradient(1.2px 1.2px at 460px 160px, #fff 50%, transparent 51%),
+                        radial-gradient(1.2px 1.2px at 860px 360px, #fff 50%, transparent 51%);
+      background-size: 1400px 1000px;
+    }
+    @keyframes drift{to{background-position:-2000px 1000px, -1600px 1200px, -1400px 1000px}}
+
+    /* ---------- SHOOTING STAR ---------- */
+    .shooting-star{
+      position:absolute; top:10%; left:-10%; width:2px; height:2px; background:#fff; border-radius:50%;
+      box-shadow:0 0 6px 2px #fff, 0 0 18px 6px var(--accent);
+      transform:translateZ(-200px);
+      animation: shoot 5s ease-in-out infinite;
+      opacity:.9;
+    }
+    .shooting-star::after{
+      content:""; position:absolute; right:2px; top:50%; height:2px; width:140px; transform:translateY(-50%);
+      background:linear-gradient(90deg, #fff, transparent);
+      filter:blur(.5px);
+    }
+    @keyframes shoot{
+      0%{transform:translate(-10vw, -10vh) rotate(15deg)}
+      20%{transform:translate(30vw, 5vh) rotate(15deg)}
+      21%{opacity:0}
+      100%{opacity:0}
+    }
+
+    /* ---------- PLANET ---------- */
+    .planet{
+      position:absolute; right:8vw; bottom:12vh; width:160px; height:160px; border-radius:50%;
+      background: radial-gradient(120px 120px at 35% 35%, #7bdcff 0%, #1f6fb2 55%, #0a2550 100%);
+      box-shadow: inset -10px -20px 40px rgba(0,0,0,.45), 0 0 60px 10px rgba(138,92,246,.35);
+      transform:translateZ(-100px);
+      animation: float 8s ease-in-out infinite;
+    }
+    .ring{
+      position:absolute; inset:0; border-radius:50%;
+      background: conic-gradient(from 0deg, rgba(3,233,244,.0), rgba(3,233,244,.7), rgba(138,92,246,.6), rgba(3,233,244,.0));
+      filter: blur(1px);
+      transform: rotateX(70deg) scale(1.35);
+      box-shadow: 0 0 20px rgba(3,233,244,.35) inset;
+    }
+    @keyframes float{50%{transform:translateZ(-100px) translateY(-10px)} 100%{transform:translateZ(-100px)}}
+
+    /* ---------- LOGIN CARD ---------- */
+    .card{
+      width:var(--card-w);
+      padding:34px 28px 28px;
+      background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:24px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06) inset;
+      transform-style:preserve-3d;
+      transition: transform .4s ease;
+      backdrop-filter: blur(12px) saturate(120%);
+    }
+    .card:hover{ transform: rotateY(12deg) rotateX(6deg); }
+
+    h1{
+      font-family: Orbitron, system-ui, sans-serif;
+      margin:0 0 20px; text-align:center; letter-spacing:2px;
+      font-size:28px; color:#fff;
+      text-shadow:0 0 12px rgba(3,233,244,.35), 0 0 30px rgba(138,92,246,.25);
+    }
+
+    .field{ position:relative; margin:22px 0; }
+    .field input{
+      width:100%; padding:14px 12px 12px; font-size:15px; color:var(--text);
+      background:transparent; outline:none;
+      border:0; border-bottom:2px solid rgba(255,255,255,.35);
+      transition:border-color .25s ease;
+    }
+    .field input:focus{ border-bottom-color: var(--accent); }
+    .field label{
+      position:absolute; left:0; top:0; padding:14px 0 0; font-size:14px; color:var(--muted);
+      pointer-events:none; transition: all .25s ease;
+    }
+    .field input:focus + label,
+    .field input:not(:placeholder-shown) + label{
+      transform: translateY(-14px); font-size:12px; color:var(--accent);
+    }
+
+    .btn{
+      width:100%; margin-top:14px; padding:12px 16px; border:0; cursor:pointer;
+      background:radial-gradient(120px 120px at 50% 0%, rgba(3,233,244,.6), rgba(3,233,244,.2) 70%, rgba(3,233,244,.05) 100%);
+      color:#eaffff; text-transform:uppercase; letter-spacing:2px; font-weight:600;
+      border-radius:12px; box-shadow: 0 0 18px rgba(3,233,244,.35), inset 0 0 8px rgba(3,233,244,.25);
+      transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow:0 0 26px rgba(3,233,244,.55), inset 0 0 10px rgba(3,233,244,.35); }
+
+    .meta{
+      margin-top:16px; display:flex; justify-content:space-between; font-size:12px; color:var(--muted);
+    }
+    .meta a{ color:#b7d8ff; text-decoration:none }
+    .meta a:hover{ text-decoration:underline }
+
+    /* accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      .card:hover{transform:none}
+      .stars,.stars2,.stars3,.shooting-star,.planet{animation:none}
+    }
+
+    /* small screens */
+    @media (max-width:480px){
+      :root{ --card-w: 92vw }
+      .planet{ right:-8vw; bottom:4vh; transform: scale(.8) translateZ(-100px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene" id="scene">
+    <!-- starfield layers -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    <div class="shooting-star"></div>
+
+    <!-- decorative planet -->
+    <div class="planet" aria-hidden="true"><div class="ring"></div></div>
+
+    <!-- login card -->
+    <form class="card" action="checkUser" method="post" autocomplete="off" aria-label="Space Login Form">
+      <h1>Space Login</h1>
+      <div class="field">
+        <input id="username" name="username" type="text" required placeholder=" " />
+        <label for="username">Username</label>
+      </div>
+      <div class="field">
+        <input id="password" name="password" type="password" required placeholder=" " />
+        <label for="password">Password</label>
+      </div>
+      <button class="btn" type="submit">Launch</button>
+     <div class="meta">
+  <a href="forgotPassword">Forgot password?</a>
+  <a href="register">Create account</a>
+</div>
+     
+    </form>
+  </div>
+
+  <script>
+    // Subtle parallax tilt based on cursor
+    (function(){
+      const scene = document.getElementById('scene');
+      const card = document.querySelector('.card');
+      let rect;
+      function updateRect(){ rect = scene.getBoundingClientRect(); }
+      updateRect();
+      window.addEventListener('resize', updateRect);
+
+      scene.addEventListener('mousemove', (e)=>{
+        const x = (e.clientX - rect.left) / rect.width - .5; // -0.5 .. 0.5
+        const y = (e.clientY - rect.top) / rect.height - .5;
+        const rotateY = x * 16; // deg
+        const rotateX = -y * 10;
+        card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+      });
+      scene.addEventListener('mouseleave', ()=>{
+        card.style.transform = '';
+      });
+    })();
+  </script>
+</body>
+</html>

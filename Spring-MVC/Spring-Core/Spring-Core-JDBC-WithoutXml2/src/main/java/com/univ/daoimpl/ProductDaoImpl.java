@@ -1,0 +1,84 @@
+package com.univ.daoimpl;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.univ.dao.ProductDao;
+import com.univ.pojo.Product;
+
+public class ProductDaoImpl implements ProductDao {
+	
+	private JdbcTemplate jTemplate;
+
+	public void setjTemplate(JdbcTemplate jTemplate) {
+		this.jTemplate = jTemplate;
+	}
+
+	@Override
+	public boolean addProduct(Product pd) {
+		try {
+			int count=jTemplate.update("insert into Product values(?,?,?)", new Object[] {pd.getpId(),pd.getpName(),pd.getPrice()});
+			return (count>0);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean updateProduct(Product pd) {
+		try {
+			int count=jTemplate.update("update Product set pName=?,Price=? where pId=? ", new Object[] {pd.getpName(),pd.getPrice(),pd.getpId()});
+			return (count>0);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean deleteProduct(Product pd) {
+		try {
+			int count=jTemplate.update("delete Product where pId=? ", new Object[] {pd.getpId()});
+			return (count>0);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+
+	}
+
+	@Override
+	public Product searchProduct(int pId) {
+		try {
+			List<Product> lst =jTemplate.query("select * from Product where pId=? ", new BeanPropertyRowMapper<Product>(Product.class),pId);
+			if(lst.size()>0)
+				return lst.get(0);
+			else
+				return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
+	@Override
+	public List<Product> getAllProduct() {
+		try {
+			List<Product> lst =jTemplate.query("select * from Product ", new BeanPropertyRowMapper<Product>(Product.class));
+			if(lst.size()>0)
+				return lst;
+			else
+				return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+	
+
+}

@@ -1,0 +1,61 @@
+package com.univ.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "fruitdetails")
+public class Fruit {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @Column(name = "fruitName")
+    private String fName;
+
+    @Column(name = "fruitQuantity")
+    private int quantity;
+
+    @Column(name = "fruitPrice")
+    private double price;
+
+	public Fruit() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Fruit(int quantity, String fName, double price) {
+		super();
+		this.quantity = quantity;
+		this.fName = fName;
+		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String getfName() {
+		return fName;
+	}
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Fruit " + quantity + "\t" + fName + "\t" + price;
+	}
+	
+	
+}

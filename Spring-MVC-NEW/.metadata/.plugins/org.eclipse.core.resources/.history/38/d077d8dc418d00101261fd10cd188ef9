@@ -1,0 +1,13 @@
+package com.nc.daoimpl;
+
+import org.springframework.stereotype.Repository;
+
+import com.nc.SpringBootHiberApp4Application;
+
+@Repository
+public class StudentDaoImpl {
+	private final SpringBootHiberApp4Application app4Application;
+	
+	
+
+}

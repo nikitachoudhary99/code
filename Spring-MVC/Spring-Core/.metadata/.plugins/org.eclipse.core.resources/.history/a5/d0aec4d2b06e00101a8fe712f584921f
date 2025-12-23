@@ -1,0 +1,64 @@
+package com.univ;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.univ.daoimpl.StudentDaoImpl;
+import com.univ.pojo.Student;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context=new ClassPathXmlApplicationContext("spring.cfg.xml");
+        StudentDaoImpl daoimpl=context.getBean("daoimpl",StudentDaoImpl.class);
+        Student std=new Student(1001,"ram","Java");
+
+//        if(daoimpl.addStudent(std))
+//        {
+//        	System.out.println("Student successfully Added");
+//        }
+//        else
+//        {
+//        	System.out.println("Student successfully not Added");
+//        }
+        if(daoimpl.updateStudent(std))
+        {
+        	System.out.println("Student successfully updated");
+            Student std1=new Student(1002,"ram","python");
+        }
+        else
+        {
+        	System.out.println("Student successfully not updated");
+        	
+        }
+        if(daoimpl.deleteStudent(std))
+        {
+        	System.out.println("Student successfully deleted");
+        	Student std1=new Student(1002,"ram","python");
+        	
+        }
+        else
+        {
+        	System.out.println("Student successfully not deleted");
+        	
+        }
+        
+        Student std = daoimpl.searchStudent(101);
+    	if(std!=null)
+    		System.out.println(std);
+    	else
+    		System.out.println("Employee Not Found");
+    	
+    	List<Student>lst = daoimpl.getallStudents();
+    	for (Student employee : lst) {
+			System.out.println(Student);
+		}
+    }
+}

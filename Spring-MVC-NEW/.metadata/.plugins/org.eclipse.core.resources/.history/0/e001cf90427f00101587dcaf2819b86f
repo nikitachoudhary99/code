@@ -1,0 +1,105 @@
+package com.univ.controller;
+
+import com.univ.dao.UserInfoDao;
+import com.univ.pojo.UserInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
+
+@Controller
+public class HomeController {
+
+    @Autowired
+    private UserInfoDao userInfoDao;
+
+    // --------- LOGIN PAGE ----------
+    @GetMapping({"/", "/login"})
+    public String loginPage() {
+        return "login";
+    }
+
+    @PostMapping("/checkUser")
+    public String login(@RequestParam("username") String username,
+                        @RequestParam("password") String password,
+                        Model model, HttpSession session) {
+
+        UserInfo u = new UserInfo();
+        u.setUsername(username);
+        u.setPassword(password);
+
+        if (userInfoDao.checkUserCredential(u)) {
+            session.setAttribute("username", username);
+            model.addAttribute("message", "Welcome, " + username);
+            return "home";
+        } else {
+            model.addAttribute("message", "Invalid username/password");
+            return "login";
+        }
+    }
+
+    // --------- REGISTER PAGE ----------
+    @GetMapping("/register")
+    public String registerPage() {
+        return "register";
+    }
+
+    @PostMapping("/saveUser")
+    public String saveUser(@RequestParam("username") String username,
+                           @RequestParam("password") String password,
+                           Model model) {
+
+        UserInfo u = new UserInfo();
+        u.setUsername(username);
+        u.setPassword(password);
+
+        if (userInfoDao.addNewUser(u)) {
+            model.addAttribute("message", "Registration successful! Please login.");
+            return "login";
+        } else {
+            model.addAttribute("message", "User could not be registered!");
+            return "register";
+        }
+    }
+
+ // --------- FORGOT PASSWORD PAGE ----------
+    @GetMapping("/forgotpassword")
+    public String forgotPasswordPage() {
+        return "forgotPassword";  // Page where user enters username + new password
+    }
+
+    // --------- HANDLE FORGOT PASSWORD SUBMISSION ----------
+    @PostMapping("/forgotPassword")
+    public ModelAndView forgotPassword(
+            @RequestParam("username") String username,
+            @RequestParam("newPassword") String newPassword,
+            @RequestParam("confirmPassword") String confirmPassword) {
+
+        if (!newPassword.equals(confirmPassword)) {
+            return new ModelAndView("forgotPassword", "message", "Passwords do not match!");
+        }
+
+        UserInfo u = new UserInfo();
+        u.setUsername(username);
+        u.setPassword(newPassword);
+
+        boolean updated = userInfoDao.updatepassword(u);
+
+        if (updated) {
+            return new ModelAndView("login", "message", "Password updated successfully! Please login.");
+        } else {
+            return new ModelAndView("forgotPassword", "message", "Username not found or update failed!");
+        }
+    }
+
+    // --------- LOGOUT ----------
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "login";
+    }
+    
+}
